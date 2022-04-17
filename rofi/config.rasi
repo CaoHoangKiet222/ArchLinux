@@ -1,0 +1,20 @@
+/** Basic config file **/
+
+configuration {
+  modi:                "window,drun,run";
+  width:               900;
+  lines:               15;
+  /* font:                "Hack Nerd Font 12"; */
+  font:                "Fira Code 12";
+  terminal:            "alacritty";
+  bw:                  1;
+  drun-match-fields:   "name,generic,exec,categories";
+  sidebar-mode:        true;
+  levenshtein-sort:    true;
+  combi-modi:          "drun,run,ssh";
+  drun-display-format: "{icon} {name}";
+  show-icons:          true;
+  icon-theme:          "oomox-gruvbox_dark";
+}
+
+@theme "~/.config/rofi/themes/gruvbox.rasi"
