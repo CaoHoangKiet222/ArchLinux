@@ -100,3 +100,5 @@ setxkbmap -option caps:escape
 # swap escape and caps
 # setxkbmap -option caps:swapescape
 
+# Auto run startx
+source "$ZDOTDIR/zsh-profile"

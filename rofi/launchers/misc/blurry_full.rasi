@@ -111,7 +111,7 @@ element-icon {
 
 element-text {
     background-color: 				@background;
-    text-color:       				inherit;
+    text-color:       				#ffffff90;
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -124,4 +124,8 @@ element selected {
     border:							0% 0.2% 0% 0.2%;
     border-radius:                  12px;
     border-color:                  @border;	
+}
+
+element-text selected {
+  text-color:                     @foreground;
 }
