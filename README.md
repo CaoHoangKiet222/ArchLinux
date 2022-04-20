@@ -2,39 +2,57 @@
 
 ### nvim
 
+```
 sudo pacman -S neovim
+```
 
 ### rofi
 
+```
 sudo pacman -S rofi
+```
 
 ### picom
 
+```
 sudo pacman -S picom
+```
 
 ### polybar
 
+```
 sudo pacman -S polybar
+```
 
 ### zsh
 
+```
 sudo pacman -S zsh
+```
 
 ### ranger
 
+```
 sudo pacman -S ranger
+```
 
 ### alacritty
 
+```
 sudo pacman -S alacritty
+```
 
 ### dunst
 
+```
 sudo pacman -S dunst
+```
 
 ### ibus-bamboo
 
+```
 sudo pacman -S ibus-bamboo
+```
 
 # Polybar Config
 
