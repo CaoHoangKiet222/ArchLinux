@@ -4,7 +4,7 @@ Each video will be associated with a branch so checkout the one you are interest
 
 ## Try out this config
 
-**NOTE** (Make sure to install rofi on Arch:)
+**NOTE** (Make sure to install rofi on Arch)
 
 ```
 sudo pacman -S rofi
@@ -13,7 +13,7 @@ sudo pacman -S rofi
 ## Just gitclone from this remote
 
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/CaoHoangKiet222/ArchLinux.git
 ```
 
 ## Gruvbox
