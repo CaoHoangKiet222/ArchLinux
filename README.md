@@ -1,12 +1,42 @@
-# Polybar Config
+# _Make sure you installed these_
 
-## Try out this config
+### nvim
 
-**NOTE** (Make sure to install rofi on Arch)
+sudo pacman -S neovim
 
-```
+### rofi
+
 sudo pacman -S rofi
-```
+
+### picom
+
+sudo pacman -S picom
+
+### polybar
+
+sudo pacman -S polybar
+
+### zsh
+
+sudo pacman -S zsh
+
+### ranger
+
+sudo pacman -S ranger
+
+### alacritty
+
+sudo pacman -S alacritty
+
+### dunst
+
+sudo pacman -S dunst
+
+### ibus-bamboo
+
+sudo pacman -S ibus-bamboo
+
+# Polybar Config
 
 ## Just gitclone from this remote
 
