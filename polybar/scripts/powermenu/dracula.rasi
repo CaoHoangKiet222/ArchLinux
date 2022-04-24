@@ -1,0 +1,104 @@
+* {
+    /* Base */
+    default-background: rgba(40, 42, 54, 80%); // <- change this for transparency
+    default-foreground: rgba(248, 248, 242, 100%);
+    default-border: rgba(189, 147, 249, 100%);
+    alternative-background: rgba(40, 42, 54, 100%);
+    invisible: rgba(0, 0, 0, 0%);
+
+    /* Colors */
+    hard-blue: rgba(154, 237, 254, 100%);
+    light-blue: rgba(139, 233, 253, 100%);
+
+    hard-red: rgba(255, 110, 103, 100%);
+    light-red: rgba(255, 85, 85, 100%);
+
+    hard-green: rgba(90, 247, 142, 100%);
+    light-green: rgba(80, 250, 123, 100%);
+
+    pink: rgba(255, 121, 198, 100%);
+
+    /* Universal */
+    background-color: @invisible;
+    border-color: #e6e6e6;
+    font: "Hack Nerd Font 12";
+    text-color: @default-foreground;
+    /* text-color:  @pink; */
+}
+
+window {
+    background-color: @default-background;
+    border: 2;
+    border-radius: 10;
+    border-color: @default-border;
+    padding: 10;
+    width: 300;
+    location: west;
+    y-offset: -35.3%;
+    x-offset: 0.6%;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+inputbar {
+   spacing: 5;
+   padding: 1;
+}
+
+entry {
+    background-color: @alternative-background;
+    padding: 6px;
+    border: 1;
+    border-radius: 2 0 0 2;
+}
+
+prompt {
+   padding: 6;
+}
+
+ci {
+    border: 5;
+}
+
+listview {
+  fixed-height: 0;
+  spacing: 0;
+  scrollbar: false;
+  padding: 1 0;
+  lines: 5;
+}
+
+element {
+    padding: 5px;
+    margin: 2;
+    border: 1;
+    border-radius: 5;
+    /* border-color: @invisible; */
+    border-color: @border-color;
+}
+
+element.selected.normal {
+    background-color: @light-blue;
+    border-color:     @hard-blue;
+    /* border-color:     @pink; */
+    color:            @alternative-background;
+}
+
+mode-switcher {
+   spacing: 20;
+}
+
+button {
+    border: 0 0 2 0;
+    border-color: @invisible;
+    padding: 5;
+}
+
+button.selected {
+    border-color: @pink;
+}
+
+/* vim:ft=css

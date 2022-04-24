@@ -1,3 +1,13 @@
+configuration {
+    font:							"Fira Code Nerd Font 12";
+    show-icons:                     true;
+    /* icon-theme: 					"oomox-gruvbox_dark"; */
+    display-drun: 					"";
+    drun-display-format:            "{icon} {name}";
+    disable-history:                false;
+    sidebar-mode: 					false;
+}
+
 * {
   background: #282828;
   foreground: #ebdbb2;
@@ -19,9 +29,7 @@
   bright-magenta: #d3869b;
   bright-cyan:    #8ec07c;
   bright-white:   #ebdbb2;
-}
 
-* {
   background-color: rgba(0,0,0,0);
   color: @foreground;
 }
@@ -31,11 +39,11 @@ window {
   border: 2;
   border-radius: 10;
   border-color: @bright-yellow;
+  width: 30%;
   padding: 10;
-  width: 300;
-  location: west;
-  y-offset: -33.8%;
-  x-offset: 0.6%;
+  location: east;
+  y-offset: -25%;
+  x-offset: -0.5%;
 }
 
 mainbox {
@@ -70,11 +78,11 @@ listview {
   spacing: 0;
   scrollbar: false;
   padding: 10 0;
-  lines: 5;
+  lines: 10;
 }
 
 element {
-  padding: 5;
+  padding: 5 5 5 10;
   margin: 2;
   border: 2;
   border-radius: 5;
@@ -88,17 +96,5 @@ element.selected {
 mode-switcher {
    spacing: 20;
 }
-
-button {
-   border: 0 0 2 0;
-   border-color: @foreground;
-   padding: 5;
-}
-
-button.selected {
-    color: @bright-yellow;
-    border-color: @bright-yellow;
-}
-
 
 /* vim:ft=css

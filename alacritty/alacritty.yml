@@ -88,7 +88,7 @@ schemes:
       green:   '#90ee90'
       yellow:  '#fabd2f'
       blue:    '#458588'
-      magenta: '#b16286'
+      magenta: '#b16286' 
       cyan:    '#8ec07c'
       white:   '#D3D3D3'
 
@@ -103,9 +103,6 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
-    # cursor:
-    #   text: "#8be9fd"
-    #   cursor: "#131313"
 ###################################### Set Theme #####################################
 colors: *gruvbox
 

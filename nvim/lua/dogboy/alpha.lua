@@ -32,7 +32,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "(ɔ◔︣‿◔︣)ɔ ❤  𝐷𝑜𝑔 𝐵𝑜𝑦 𝑁𝑜 𝑅𝑖𝑣𝑎𝑙𝑠 ❤  ʕ•́ᴥ•̀ʔっ"
+	return "(ɔ◔︣‿◔︣)ɔ❤  𝐷𝑜𝑔 𝐵𝑜𝑦 𝑁𝑜 𝑅𝑖𝑣𝑎𝑙𝑠 ❤ ʕ•́ᴥ•̀ʔっ"
 end
 
 dashboard.section.footer.val = footer()

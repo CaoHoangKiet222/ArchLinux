@@ -1,45 +1,45 @@
 # Main Colors
 unrecognized_file: orangered
-recognized_file:  lightgreen
-executable_file:   lime
-dir:              "#fabd2f"
+recognized_file: lightgreen
+executable_file: lime
+dir: '#fabd2f'
 
 # Link
 dead_link: red
-link:      cyan
+link: cyan
 
 # special files
-socket:    green
-blockdev:  green
-chardev:   green
+socket: green
+blockdev: green
+chardev: green
 
 # Access Modes
-write:     darkkhaki
-read:      limegreen
-exec:      red
+write: darkkhaki
+read: limegreen
+exec: red
 no_access: indianred
 
 # Age
-day_old:     mediumspringgreen
-hour_old:    lime
+day_old: mediumspringgreen
+hour_old: lime
 no_modifier: seagreen
 
 # File Size
-file_large:  orange
+file_large: orange
 file_medium: gold
-file_small:  peachpuff
+file_small: peachpuff
 
 # Random
 report: white
-user:   moccasin
-tree:   cyan
-empty:  yellow
-error:  red
+user: moccasin
+tree: cyan
+empty: yellow
+error: red
 normal: darkkhaki
 
 # Git
-addition:     chartreuse
+addition: chartreuse
 modification: darkkhaki
-deletion:     darkred
-untracked:    darkorange
-unchanged:    forestgreen
+deletion: darkred
+untracked: darkorange
+unchanged: forestgreen

@@ -9,7 +9,7 @@ configuration {
   terminal:            "alacritty";
   bw:                  1;
   drun-match-fields:   "name,generic,exec,categories";
-  sidebar-mode:        true;
+  /* sidebar-mode:        true; */
   levenshtein-sort:    true;
   combi-modi:          "drun,run,ssh";
   drun-display-format: "{icon} {name}";

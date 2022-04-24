@@ -5,6 +5,7 @@ try
   " dracula
   " darkplus
   " gruvbox
+  " Cyberpunk-Neon
   colorscheme gruvbox
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default

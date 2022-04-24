@@ -1,0 +1,96 @@
+configuration {
+    font:							"Fira Code Nerd Font 12";
+    show-icons:                     true;
+    display-drun: 					"";
+    drun-display-format:            "{icon} {name}";
+    disable-history:                false;
+    sidebar-mode: 					false;
+}
+
+* {
+    default-background: rgba(40, 42, 54, 80%);
+    default-foreground: rgba(248, 248, 242, 100%);
+    default-border: rgba(189, 147, 249, 100%);
+    alternative-background: rgba(40, 42, 54, 100%);
+    invisible: rgba(0, 0, 0, 0%);
+
+    hard-blue: rgba(154, 237, 254, 100%);
+    light-blue: rgba(139, 233, 253, 100%);
+
+    hard-red: rgba(255, 110, 103, 100%);
+    light-red: rgba(255, 85, 85, 100%);
+
+    hard-green: rgba(90, 247, 142, 100%);
+    light-green: rgba(80, 250, 123, 100%);
+
+    pink: rgba(255, 121, 198, 100%);
+
+    background-color: @invisible;
+    border-color: #e6e6e6;
+    text-color: @default-foreground;
+}
+
+window {
+    background-color: @default-background;
+    border: 2;
+    border-radius: 10;
+    border-color: @default-border;
+    width: 30%;
+    padding: 10;
+    location: east;
+    y-offset: -26%;
+    x-offset: -0.5%;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+inputbar {
+   spacing: 5;
+   padding: 1;
+}
+
+prompt {
+   padding: 6;
+}
+
+entry {
+    background-color: @alternative-background;
+    padding: 5px;
+    border: 1;
+    border-radius: 5;
+}
+
+ci {
+    border: 5;
+}
+
+listview {
+  fixed-height: 0;
+  spacing: 0;
+  scrollbar: false;
+  padding: 10 0;
+  lines: 10;
+}
+
+element {
+    padding: 5 5 5 10;
+    margin: 2;
+    border: 1;
+    border-radius: 5;
+    border-color: @border-color;
+}
+
+element.selected {
+    background-color: @light-blue;
+    border-color:     @hard-blue;
+    color:            @alternative-background;
+}
+
+mode-switcher {
+   spacing: 20;
+}
+
+/* vim:ft=css

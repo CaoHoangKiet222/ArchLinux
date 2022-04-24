@@ -1,13 +1,10 @@
-# Network Manager Applet
-nm-applet --indicator &
-
 # Random Wallpaper Every Login
-feh --bg-fill --randomize ~/Pictures/Wallpapers-Gruvbox/*
+feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*
 
 # Don't Randomly Turn off
-xset s off
-xset -dpms
-xset s noblank
+# xset s off
+# xset -dpms
+# xset s noblank
 
 # Speedy keys
 xset r rate 210 40
@@ -18,12 +15,6 @@ picom &
 # Hide mouse when typing
 xbanish &
 
-# Bluetooth systray icon
-blueman-applet &
-
-# helps with pulsaudio
-pasystray &
-
 # Screenshots
 flameshot &
 
@@ -32,3 +23,15 @@ greenclip daemon &
 
 # Make notification more beautiful
 dunst &
+
+# Network Manager Applet
+nm-applet --indicator &
+
+# Bluetooth systray icon
+blueman-applet &
+
+# Set server for copy to clipboard
+copyq &
+
+# Helps with pulsaudio
+# pasystray &

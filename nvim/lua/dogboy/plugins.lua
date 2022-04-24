@@ -102,8 +102,10 @@ return packer.startup(function(use)
 		"dracula/vim",
 		{ name = "dracula" },
 	})
-	use({ "ellisonleao/gruvbox.nvim" })
+	-- use("Mofiqul/dracula.nvim")
+	use({ "morhetz/gruvbox" })
 	use({ "drewtempelmeyer/palenight.vim" })
+	use("Roboron3042/Cyberpunk-Neon")
 
 	-- Colorizer
 	use("norcalli/nvim-colorizer.lua")

@@ -1,11 +1,11 @@
 configuration {
-	font:							"Fira Code Nerd Font 12";
+    font:							"Fira Code Nerd Font 12";
     show-icons:                     true;
-	icon-theme: 					"oomox-gruvbox_dark";
+    icon-theme: 					"oomox-gruvbox_dark";
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
-	sidebar-mode: 					false;
+    sidebar-mode: 					false;
 }
 
 * {

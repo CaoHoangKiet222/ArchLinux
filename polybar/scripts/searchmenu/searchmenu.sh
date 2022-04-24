@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme="searchmenu"
-dir="$HOME/.config/rofi/searchmenu"
+theme='gruvbox.rasi'
+dir="$HOME/.config/polybar/scripts/searchmenu"
 
 rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"

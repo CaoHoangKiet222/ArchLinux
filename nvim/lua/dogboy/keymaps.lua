@@ -100,3 +100,6 @@ keymap("n", "<A-S-l>", ":vertical resize -2<CR>", opts)
 
 -- Rotate 2 buffers
 keymap("n", "<A-o>", "<C-w>r", opts)
+
+-- Autoload theme for neovim
+keymap("n", "<C-s>", "<Cmd>source ~/.config/nvim/lua/dogboy/colorscheme.lua<CR>", opts)
