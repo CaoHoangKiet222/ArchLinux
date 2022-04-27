@@ -5,10 +5,10 @@ theme='gruvbox.rasi'
 THEME="$HOME/.config/polybar/scripts/switchcolors/styles/$theme"
 
 MENU="$(rofi -sep "|" \
-  -dmenu -i -p 'Select theme' \
+  -dmenu \
   -hide-scrollbar \
   -theme $THEME \
-  <<< " gruvbox|嗀  dracula")"
+  <<< "gruvbox|dracula")"
 
 case "$MENU" in
   *gruvbox) $SDIR/colors.sh gruvbox ;;

@@ -36,7 +36,7 @@
     icon_position = top
     min_icon_size = 0
     max_icon_size = 75
-    icon_path = ~/.config/dunst/Pictures
+    icon_path = ~/.config/Pictures
     sticky_history = yes
     history_length = 20
     always_run_script = true
@@ -53,13 +53,13 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#282828"
+    background = "#28282830"
     foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_normal]
-    background = "#11121D"
-    foreground = "#A0A8CD"
+    background = "#28282830"
+    foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_critical]

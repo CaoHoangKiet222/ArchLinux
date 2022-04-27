@@ -1,24 +1,16 @@
 * {
-    default-background: rgba(40, 42, 54, 80%); // <- change this for transparency
-    default-foreground: rgba(248, 248, 242, 100%);
-    default-border: rgba(189, 147, 249, 100%);
-    alternative-background: rgba(40, 42, 54, 100%);
-    invisible: rgba(0, 0, 0, 0%);
-
-    hard-blue: rgba(154, 237, 254, 100%);
-    light-blue: rgba(139, 233, 253, 100%);
-
-    hard-red: rgba(255, 110, 103, 100%);
-    light-red: rgba(255, 85, 85, 100%);
-
-    hard-green: rgba(90, 247, 142, 100%);
-    light-green: rgba(80, 250, 123, 100%);
-
-    pink: rgba(255, 121, 198, 100%);
+    default-background: #282a36;
+    default-foreground: #f8f8f2;
+    default-border:  #f8f8f2;
+    alternative-background: #282a36;
+    invisible: #00000000;
+    hard-blue: #9aedfe;
+    light-blue: #8be9fd;
+    pink: #ff79c6;
 
     background-color: @invisible;
     border-color: #e6e6e6;
-    font: "Hack Nerd Font 12";
+    font: "Fira Code Font 12";
     text-color: @default-foreground;
 }
 
@@ -29,9 +21,10 @@ window {
     border-color: @default-border;
     padding: 10;
     width: 300;
-    location: west;
-    y-offset: -35.3%;
-    x-offset: 82%;
+    /* location: west; */
+    /* y-offset: -33.8%; */
+    /* x-offset: 82%; */
+    postion: center;
 }
 
 mainbox {
@@ -40,8 +33,19 @@ mainbox {
 }
 
 inputbar {
-   spacing: 5;
-   padding: 1;
+    children: [textbox-prompt-colon];
+    spacing: 5;
+    padding: 1;
+    border: 0.1% 0.3% 0.1% 0.3%;
+    border-radius: 12px;
+}
+
+textbox-prompt-colon {
+  str: "☣  𝑆𝑒𝑙𝑒𝑐𝑡 𝑇ℎ𝑒𝑚𝑒 ☠";
+	text-color:	@pink;
+  padding: 0.5% 0 0.5% 0;
+  margin: 0% 0% 0.5% 1.5%;
+  font: "Fira Code 20";
 }
 
 entry {
@@ -49,14 +53,6 @@ entry {
     padding: 6px;
     border: 1;
     border-radius: 2 0 0 2;
-}
-
-prompt {
-   padding: 6;
-}
-
-ci {
-    border: 5;
 }
 
 listview {
@@ -72,29 +68,18 @@ element {
     margin: 2;
     border: 1;
     border-radius: 5;
-    /* border-color: @invisible; */
     border-color: @border-color;
+}
+
+element-text {
+  horizontal-align: 0.45;
+  font: "Fira Code 13";
 }
 
 element.selected.normal {
     background-color: @light-blue;
     border-color:     @hard-blue;
-    /* border-color:     @pink; */
     color:            @alternative-background;
-}
-
-mode-switcher {
-   spacing: 20;
-}
-
-button {
-    border: 0 0 2 0;
-    border-color: @invisible;
-    padding: 5;
-}
-
-button.selected {
-    border-color: @pink;
 }
 
 /* vim:ft=css

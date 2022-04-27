@@ -10,7 +10,9 @@ MENU="$(rofi -sep "|" \
    <<< " Lock| Logout| Reboot| Shutdown| Suspend")"
 
 case "$MENU" in
-  *Lock) i3lock-fancy-rapid 5 3;;
+  *Lock) 
+    sleep 0.1 
+    i3lock-fancy-rapid 5 3;;
   *Logout) i3-msg exit;;
   *Reboot) reboot;;
   *Shutdown) poweroff;;

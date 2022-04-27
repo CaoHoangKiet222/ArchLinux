@@ -1,7 +1,6 @@
 configuration {
     font:							"Fira Code Nerd Font 12";
     show-icons:                     true;
-    /* icon-theme: 					"oomox-gruvbox_dark"; */
     display-drun: 					"";
     drun-display-format:            "{icon} {name}";
     disable-history:                false;
@@ -31,6 +30,7 @@ configuration {
   bright-white:   #ebdbb2;
 
   background-color: rgba(0,0,0,0);
+  background-alt: rgba(235, 219, 178, 0.8);
   color: @foreground;
 }
 
@@ -42,7 +42,7 @@ window {
   width: 30%;
   padding: 10;
   location: east;
-  y-offset: -25%;
+  y-offset: -24.8%;
   x-offset: -0.5%;
 }
 
@@ -51,22 +51,31 @@ mainbox {
    padding: 0;
 }
 
-inputbar {
-   spacing: 5;
-   padding: 1;
-}
-
 prompt {
-   padding: 6;
+  enabled: true;
+  margin: 0.4% 0.4% 0% 0.7%;
+  background-color: transparent;
+	text-color: @normal-black;
+	font:	"Fira Code 12";
 }
 
 entry {
-  background-color: rgba(235, 219, 178, 0.8); /* foreground */
-  color: @normal-black;
-  padding: 5px;
-  border: 1;
+  background-color: transparent;
+  text-color: @normal-black;
+  padding: 5px 5px 5px 0;
+  expand: true;
+  horizontal-align: 0;
+  placeholder: "Search";
+  blink: true;
+}
+
+inputbar {
+  children:[ prompt, entry ];
+  background-color:  @background-alt;
+  expand: false;
+  border:	0.1%;
   border-radius: 5;
-  border-color: @bright-blue;
+  padding: 3px;
 }
 
 ci {

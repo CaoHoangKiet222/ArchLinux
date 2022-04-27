@@ -83,6 +83,7 @@ case $chosen in
         ;;
     $lock)
 		if [[ -f /usr/bin/i3lock ]]; then
+      sleep 0.1
 			i3lock-fancy-rapid 5 3
 		fi
         ;;

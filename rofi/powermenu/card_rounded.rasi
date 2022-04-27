@@ -1,13 +1,12 @@
 configuration {
-	font:							"Fira Code 18";
-    show-icons:                     false;
-	icon-theme: 					"oomox-gruvbox_dark";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-	sidebar-mode: 					false;
+	font:	"Fira Code 18";
+  show-icons: false;
+  drun-display-format: "{name}";
+  disable-history: false;
+	sidebar-mode: false;
 }
 
-@import "styles/colors.rasi"
+@import "styles/gruvbox.rasi"
 
 window {
     transparency:                   "real";
@@ -51,7 +50,7 @@ textbox-prompt-colon {
 
 inputbar {
 	/* children: 						[ textbox-prompt-colon, prompt ]; */
-	children: 						[ textbox-prompt-colon ];
+    children: 						[ textbox-prompt-colon ];
     background-color:               @background-alt;
     text-color:                     @foreground;
     expand:                         false;
@@ -60,7 +59,6 @@ inputbar {
     border-color:                  	@border;
     margin:                         0% 2% 0% 0%;
     padding:                        0% 0% 0% 10%;
-    position:                       center;
 }
 
 listview {

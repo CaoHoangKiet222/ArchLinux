@@ -8,22 +8,14 @@ configuration {
 }
 
 * {
-    default-background: rgba(40, 42, 54, 80%);
-    default-foreground: rgba(248, 248, 242, 100%);
-    default-border: rgba(189, 147, 249, 100%);
-    alternative-background: rgba(40, 42, 54, 100%);
-    invisible: rgba(0, 0, 0, 0%);
-
-    hard-blue: rgba(154, 237, 254, 100%);
-    light-blue: rgba(139, 233, 253, 100%);
-
-    hard-red: rgba(255, 110, 103, 100%);
-    light-red: rgba(255, 85, 85, 100%);
-
-    hard-green: rgba(90, 247, 142, 100%);
-    light-green: rgba(80, 250, 123, 100%);
-
-    pink: rgba(255, 121, 198, 100%);
+    default-background: #282a36;
+    default-foreground: #f8f8f2;
+    default-border:  #f8f8f2;
+    alternative-background: #282a36;
+    invisible: #00000000;
+    hard-blue: #9aedfe;
+    light-blue: #8be9fd;
+    pink: #ff79c6;
 
     background-color: @invisible;
     border-color: #e6e6e6;
@@ -38,7 +30,7 @@ window {
     width: 30%;
     padding: 10;
     location: east;
-    y-offset: -26%;
+    y-offset: -25.5%;
     x-offset: -0.5%;
 }
 
@@ -48,19 +40,25 @@ mainbox {
 }
 
 inputbar {
-   spacing: 5;
-   padding: 1;
+  children:[ prompt, entry ];
+  expand: false;
+  border:	0.1%;
+  border-radius: 5;
+  padding: 5px;
 }
 
 prompt {
-   padding: 6;
+  padding: 6;
+  background-color: transparent;
+  margin: -0.1% 0% 0% 0.4%;
+	font:	"Fira Code 12";
 }
 
 entry {
-    background-color: @alternative-background;
-    padding: 5px;
-    border: 1;
-    border-radius: 5;
+  background-color: transparent;
+  padding: 5px;
+  placeholder: "Search";
+  blink: true;
 }
 
 ci {
@@ -87,10 +85,6 @@ element.selected {
     background-color: @light-blue;
     border-color:     @hard-blue;
     color:            @alternative-background;
-}
-
-mode-switcher {
-   spacing: 20;
 }
 
 /* vim:ft=css

@@ -139,7 +139,9 @@ bindsym $mod+Shift+0 move container to workspace number $ws10;
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart; 
+set $toggle_picom exec "~/.config/i3/togglePicom/toggle_picom.sh"
+
+bindsym $mod+Shift+r $toggle_picom; restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -219,19 +221,19 @@ client.focused_inactive     $bg        $bg         $ac
 client.urgent               $rd        $rd         $tx
 
 # Light
-set $brightnessUp exec ~/.config/i3/changeBrightness/changebrightness.sh up
-set $brightnessDown exec ~/.config/i3/changeBrightness/changebrightness.sh down
+set $brightness_up exec ~/.config/i3/changeBrightness/changebrightness.sh up
+set $brightness_down exec ~/.config/i3/changeBrightness/changebrightness.sh down
 
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
-bindsym $mod+Shift+plus $brightnessUp
-bindsym $mod+Shift+minus $brightnessDown
+bindsym $mod+Shift+plus $brightness_up 
+bindsym $mod+Shift+minus $brightness_down
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-set $volumeUp exec ~/.config/i3/changeVolumes/changevolume.sh up
-set $volumeDown exec ~/.config/i3/changeVolumes/changevolume.sh down
-set $volumeMute exec ~/.config/i3/changeVolumes/changevolume.sh mute
+set $volume_up exec ~/.config/i3/changeVolumes/changevolume.sh up
+set $volume_down exec ~/.config/i3/changeVolumes/changevolume.sh down
+set $volume_mute exec ~/.config/i3/changeVolumes/changevolume.sh mute
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -240,9 +242,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 # bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym $mod+plus $volumeUp
-bindsym $mod+minus $volumeDown
-bindcode $mod+67  $volumeMute
+bindsym $mod+plus $volume_up
+bindsym $mod+minus $volume_down 
+bindcode $mod+67  $volume_mute
 
 # Change Workspace
 bindsym $mod+Tab workspace back_and_forth;

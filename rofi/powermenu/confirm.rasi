@@ -1,11 +1,11 @@
 /* Confirm Dialog */
 
-@import "styles/colors.rasi"
+@import "styles/gruvbox.rasi"
 
 * {
     background-color:       @background;
     text-color:             @foreground;
-	font:				 	"FantasqueSansMono Nerd Font 12";
+    font:				 	"Fira Code 11";
 }
 
 window {
