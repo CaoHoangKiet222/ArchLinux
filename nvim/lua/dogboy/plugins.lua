@@ -116,11 +116,9 @@ return packer.startup(function(use)
 		{ branch = "master" },
 	})
 
-	-- Snippet
-	use("honza/vim-snippets")
-
 	-- React
 	use("mattn/emmet-vim")
+	-- if want to use styled-components, use typescript-styled-plugin
 
 	-- Autoclose And Autorename tag
 	use("windwp/nvim-ts-autotag")

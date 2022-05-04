@@ -18,9 +18,6 @@ xbanish &
 # Screenshots
 flameshot &
 
-# Clipboard tool
-greenclip daemon &
-
 # Make notification more beautiful
 dunst &
 
@@ -31,6 +28,7 @@ nm-applet --indicator &
 blueman-applet &
 
 # Set server for copy to clipboard
+# greenclip daemon &
 copyq &
 
 # Helps with pulsaudio
