@@ -36,7 +36,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill;
+bindsym $mod+q kill;
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "~/.config/rofi/launchers/misc/launcher.sh"
@@ -105,7 +105,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*"
+set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Dracula/*"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1; $autoSelectWallpaper
@@ -206,7 +206,7 @@ gaps top 30
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #fabd2f
+set $ac     #EE82EE
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f

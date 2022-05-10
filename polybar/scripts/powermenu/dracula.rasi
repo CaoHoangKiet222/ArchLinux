@@ -1,15 +1,14 @@
 * {
-    default-background: #282a36;
+    default-background: #14141450;
     default-foreground: #f8f8f2;
-    default-border:  #f8f8f2;
+    default-border:  #ff00ff;
     alternative-background: #282a36;
     invisible: #00000000;
     hard-blue: #9aedfe;
     light-blue: #8be9fd;
-    pink: #ff79c6;
 
     background-color: @invisible;
-    border-color: #e6e6e6;
+    border-color: #bd93f9;
     font: "Hack Nerd Font 12";
     text-color: @default-foreground;
 }
@@ -64,15 +63,12 @@ element {
     margin: 2;
     border: 1;
     border-radius: 5;
-    /* border-color: @invisible; */
     border-color: @border-color;
 }
 
 element.selected {
     background-color: @light-blue;
     border-color:     @hard-blue;
-    /* border-color:     @pink; */
-    color:            @alternative-background;
 }
 
 /* vim:ft=css

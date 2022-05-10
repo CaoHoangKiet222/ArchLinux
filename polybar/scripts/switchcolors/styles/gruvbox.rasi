@@ -1,5 +1,5 @@
 * {
-  background: #282828;
+  background: #28282850;
   foreground: #ebdbb2;
 
   normal-black:   #665c54;
@@ -33,9 +33,6 @@ window {
   border-color: @bright-yellow;
   padding: 10;
   width: 300;
-  /* location: west; */
-  /* y-offset: -32.6%; */
-  /* x-offset: 82%; */
   position: center;
 }
 

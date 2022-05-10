@@ -1,6 +1,6 @@
 /* Confirm Dialog */
 
-@import "styles/gruvbox.rasi"
+@import "styles/dracula.rasi"
 
 * {
     background-color:       @background;
