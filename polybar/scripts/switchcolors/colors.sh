@@ -8,6 +8,7 @@ source $HOME/.config/polybar/scripts/switchcolors/replaces/scripts_polybar.sh
 source $HOME/.config/polybar/scripts/switchcolors/replaces/zsh.sh
 source $HOME/.config/polybar/scripts/switchcolors/replaces/settings.sh
 source $HOME/.config/polybar/scripts/switchcolors/replaces/flameshot.sh
+source $HOME/.config/polybar/scripts/switchcolors/replaces/xprofile.sh
 
 LAUNCH="$HOME/.config/polybar/launch.sh"
 
@@ -31,6 +32,9 @@ rofi_changes $1
 
 # replacing dunst for beautiful notification
 dunst_changes $1
+
+# replacing Pictures in .xprofile
+xprofile_changes $1
 
 # replacing theme file and restart tray icons
 settings_changes
