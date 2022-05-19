@@ -105,7 +105,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Dracula/*"
+set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1; $autoSelectWallpaper
@@ -175,11 +175,15 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 2
 
 # Examples
+set $visible true
 gaps inner 10
-gaps top 30
+gaps top 35
 # gaps outer 15
 # gaps horizontal 40
 # gaps outer 60
+
+# Able to hide polybar
+bindsym $mod+b exec ~/.config/i3/togglePolybar/toggle_polybar.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -206,7 +210,7 @@ gaps top 30
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #EE82EE
+set $ac     #fabd2f
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f

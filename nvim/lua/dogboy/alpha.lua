@@ -16,6 +16,19 @@ dashboard.section.header.val = {
 	[[   ░        ░ ░        ░     ░          ░ ░  ░ ░     ]],
 	[[ ░                                ░          ░ ░     ]],
 }
+
+-- dashboard.section.header.val = {
+-- 	[[ ▄████▄   ██░ ██  ██ ▄█▀]],
+-- 	[[▒██▀ ▀█  ▓██░ ██▒ ██▄█▒ ]],
+-- 	[[▒▓█    ▄ ▒██▀▀██░▓███▄░ ]],
+-- 	[[▒▓▓▄ ▄██▒░▓█ ░██ ▓██ █▄ ]],
+-- 	[[▒ ▓███▀ ░░▓█▒░██▓▒██▒ █▄]],
+-- 	[[░ ░▒ ▒  ░ ▒ ░░▒░▒▒ ▒▒ ▓▒]],
+-- 	[[  ░  ▒    ▒ ░▒░ ░░ ░▒ ▒░]],
+-- 	[[░         ░  ░░ ░░ ░░ ░ ]],
+-- 	[[░ ░       ░  ░  ░░  ░   ]],
+-- 	[[░                       ]],
+-- }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
@@ -33,6 +46,7 @@ dashboard.section.buttons.val = {
 		"  React server",
 		":e ~/Documents/DogBoy/LearnReact/video-plus-chat-app/server/app.js <CR>"
 	),
+	dashboard.button("os", "  Operating System", ":e ~/Downloads/assignment/source_code/src/sched.c <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 

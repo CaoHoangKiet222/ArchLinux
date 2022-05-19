@@ -5,6 +5,7 @@ feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*
 # xset s off
 # xset -dpms
 # xset s noblank
+pulsaudio &
 
 # Speedy keys
 xset r rate 210 40

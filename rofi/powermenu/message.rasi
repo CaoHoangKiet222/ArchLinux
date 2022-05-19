@@ -1,6 +1,6 @@
 /* Message Dialog */
 
-@import "styles/dracula.rasi"
+@import "styles/gruvbox.rasi"
 
 * {
     background-color:       @background;

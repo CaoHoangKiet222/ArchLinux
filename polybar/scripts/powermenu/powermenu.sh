@@ -1,6 +1,6 @@
 #!/bin/bash
 
-theme='dracula.rasi'
+theme="gruvbox.rasi"
 THEME="$HOME/.config/polybar/scripts/powermenu/$theme"
 
 MENU="$(rofi -sep "|" \
