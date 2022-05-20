@@ -255,10 +255,10 @@ bindsym $mod+Tab workspace back_and_forth;
 # bindsym $mod+Tab workspace prev 
 
 #keyboard layout
-bindcode $mod+34 exec ./.config/i3/changeLanguage/change_language.sh
+bindcode $mod+34 exec ~/.config/i3/changeLanguage/change_language.sh
 
 # Flameshot
-bindsym $mod+Shift+s exec "flameshot gui"
+bindsym $mod+Shift+s exec ~/.config/i3/toggleFlameShot/toggle_flameshot.sh
 
 # Polybar
 exec_always --no-startup-id ./.config/polybar/launch.sh
