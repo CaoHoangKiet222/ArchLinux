@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
 	use("akinsho/toggleterm.nvim")
@@ -122,6 +123,8 @@ return packer.startup(function(use)
 
 	-- Autoclose And Autorename tag
 	use("windwp/nvim-ts-autotag")
+
+	-- use("dinhhuy258/vim-database", { branch = "master" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

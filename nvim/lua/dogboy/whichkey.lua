@@ -176,6 +176,8 @@ local mappings = {
 		U = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
 		T = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
 		P = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+		c = { "<cmd>lua _CPP_COMPILE_TOGGLE()<cr>", "Cpp" },
+		C = { "<cmd>lua _CPP_COMPILE_WITH_ARGV_TOGGLE()<cr>", "Cpp_*argv" },
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
