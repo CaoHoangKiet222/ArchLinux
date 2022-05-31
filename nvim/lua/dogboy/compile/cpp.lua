@@ -15,6 +15,7 @@ function CompileAndRunFloat()
 	-- 		true
 	-- 	)
 
+	-- vim.fn to change from lua to vimscript
 	return vim.fn.printf("g++ -std=c++11 %s %s %s", vim.fn.expand("%"), "&& ./a.out", "&& rm -f ./a.out")
 end
 
@@ -32,12 +33,23 @@ function _CPP_COMPILE_TOGGLE()
 end
 
 function _CPP_COMPILE_WITH_ARGV_TOGGLE()
-	local input = vim.fn.input("Enter value for argv[1]: ")
-	local cpp1 = Terminal:new({
-		cmd = CompileAndRunWithArgvs(input),
-		direction = "float",
-	})
-	cpp1:toggle()
+	local num_of_argvs = vim.fn.input("Enter number of arguments to compile cpp: ")
+	local inputList = ""
+
+	for i = 1, tonumber(num_of_argvs), 1 do
+		local input = vim.fn.input("Enter value for argv[" .. i .. "]: ")
+		inputList = inputList .. input
+		if i ~= tonumber(num_of_argvs) then
+			inputList = inputList .. " "
+		end
+	end
+
+	Terminal
+		:new({
+			cmd = CompileAndRunWithArgvs(inputList),
+			direction = "float",
+		})
+		:toggle()
 end
 --
 -- vim.api.nvim_set_keymap("n", "<F1>", "<cmd>lua _CPP_COMPILE_TOGGLE()<CR>", { noremap = true, silent = true })
