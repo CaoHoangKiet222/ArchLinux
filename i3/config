@@ -105,7 +105,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Dracula/*"
+set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1; $autoSelectWallpaper
@@ -173,6 +173,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 2
+# for_window [title="Form"] floating disable
 
 # Examples
 set $visible true
@@ -210,7 +211,7 @@ bindsym $mod+b exec ~/.config/i3/togglePolybar/toggle_polybar.sh
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #EE82EE
+set $ac     #fabd2f
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f
@@ -258,7 +259,7 @@ bindsym $mod+Tab workspace back_and_forth;
 bindcode $mod+34 exec ~/.config/i3/changeLanguage/change_language.sh
 
 # Flameshot
-bindsym $mod+Shift+s exec ~/.config/i3/toggleFlameShot/toggle_flameshot.sh
+bindsym $mod+Shift+s exec flameshot gui
 
 # Polybar
 exec_always --no-startup-id ./.config/polybar/launch.sh
@@ -270,5 +271,7 @@ bindcode $mod+66 exec ./.config/i3/toggleCapsLock/toggle_caps.sh
 bindsym $mod+p exec ~/.config/rofi/powermenu/powermenu.sh
 
 # Clipboard tool
-# bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
 bindsym $mod+c exec copyq menu
+
+# Change theme
+bindcode $mod+51 exec ~/.config/polybar/scripts/switchcolors/switchcolors.sh
