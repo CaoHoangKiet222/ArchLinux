@@ -8,5 +8,8 @@ function flameshot_changes() {
   elif [ $1 == "dracula" ]
   then
     flameshot config -m violet
+  elif [ $1 == "tokyo-night" ]
+  then
+    flameshot config -m "#7AA2F7" 
   fi
 }
