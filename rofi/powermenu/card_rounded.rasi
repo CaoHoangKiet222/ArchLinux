@@ -6,7 +6,7 @@ configuration {
 	sidebar-mode: false;
 }
 
-@import "styles/gruvbox.rasi"
+@import "styles/tokyo-night.rasi"
 
 window {
     transparency:                   "real";

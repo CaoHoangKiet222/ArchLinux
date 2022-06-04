@@ -6,7 +6,8 @@ try
   " darkplus
   " gruvbox
   " Cyberpunk-Neon
-  colorscheme dracula
+  " tokyonight
+  colorscheme tokyonight
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

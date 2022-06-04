@@ -107,6 +107,11 @@ return packer.startup(function(use)
 	use({ "morhetz/gruvbox" })
 	use({ "drewtempelmeyer/palenight.vim" })
 	use("Roboron3042/Cyberpunk-Neon")
+	use("folke/tokyonight.nvim")
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+	})
 
 	-- Colorizer
 	use("norcalli/nvim-colorizer.lua")

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme="gruvbox.rasi"
+theme="tokyo-night.rasi"
 THEME="$HOME/.config/rofi-wifi-menu/styles/$theme"
 
 notify-send "Getting list of available Wi-Fi networks..."

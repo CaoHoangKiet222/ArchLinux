@@ -1,6 +1,6 @@
 /* Confirm Dialog */
 
-@import "styles/gruvbox.rasi"
+@import "styles/tokyo-night.rasi"
 
 * {
     background-color:       @background;

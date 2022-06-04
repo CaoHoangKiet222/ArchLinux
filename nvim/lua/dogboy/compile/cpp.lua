@@ -34,11 +34,14 @@ end
 
 function _CPP_COMPILE_WITH_ARGV_TOGGLE()
 	local num_of_argvs = vim.fn.input("Enter number of arguments to compile cpp: ")
-	local inputList = ""
 
+	if tonumber(num_of_argvs) < 0 then
+		error("Errors occur when you enter input!!")
+	end
+
+	local inputList = ""
 	for i = 1, tonumber(num_of_argvs), 1 do
-		local input = vim.fn.input("Enter value for argv[" .. i .. "]: ")
-		inputList = inputList .. input
+		inputList = inputList .. vim.fn.input("Enter value for argv[" .. i .. "]: ")
 		if i ~= tonumber(num_of_argvs) then
 			inputList = inputList .. " "
 		end
