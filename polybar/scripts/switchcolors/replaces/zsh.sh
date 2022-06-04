@@ -24,6 +24,15 @@ function zsh_changes() {
     sed -i 's/colors: .*/colors: *dracula/g' $ADIR/alacritty.yml
     # replacing theme in neovim
     sed -i '0,/colorscheme .*/s//colorscheme dracula/' $NDIR/colorscheme.lua
+  elif [ $1 == "tokyo-night" ]
+  then
+    # replacing colorls dir and zsh-prompt
+    sed -i 's/dir: .*/dir: blue/' $COLDIR/dark_colors.yaml
+    sed -i '36 s/yellow/blue/g' $ZSHDIR/zsh-prompt
+    # replacing colors in alacritty
+    sed -i 's/colors: .*/colors: *tokyo-night/g' $ADIR/alacritty.yml
+    # replacing theme in neovim
+    sed -i '0,/colorscheme .*/s//colorscheme tokyonight/' $NDIR/colorscheme.lua
   fi
   i3-msg reload
 }

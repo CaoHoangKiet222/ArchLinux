@@ -9,5 +9,8 @@ function xprofile_changes() {
   elif [ $1 == "dracula" ]
   then
     sed -i "s/Pictures.*/Pictures\/Wallpapers-Dracula\/*/g" ~/.config/X11/.xprofile
+  elif [ $1 == "tokyo-night" ]
+  then
+    sed -i "s/Pictures.*/Pictures\/Wallpapers-TokyoNight\/*/g" ~/.config/X11/.xprofile
   fi
 }

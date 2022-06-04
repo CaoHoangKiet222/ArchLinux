@@ -12,6 +12,10 @@ function i3_changes() {
   then
     sed -i 's/set $ac .*/set $ac     #EE82EE/g' $I3DIR/config
     sed -i "s/Pictures.*/Pictures\/Wallpapers-Dracula\/*\"/g" $I3DIR/config
+  elif [ $1 == "tokyo-night" ]
+  then
+    sed -i 's/set $ac .*/set $ac     #7aa2f7/g' $I3DIR/config
+    sed -i "s/Pictures.*/Pictures\/Wallpapers-TokyoNight\/*\"/g" $I3DIR/config
   fi
   i3-msg reload
 }

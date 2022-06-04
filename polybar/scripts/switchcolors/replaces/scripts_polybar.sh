@@ -14,6 +14,11 @@ function scripts_polybar_changes() {
     sed -i "s/theme=.*/theme='dracula.rasi'/g" $SDIR/powermenu/powermenu.sh
     sed -i "s/theme=.*/theme='dracula.rasi'/g" $SDIR/searchmenu/searchmenu.sh
     sed -i "s/theme=.*/theme='dracula.rasi'/g" $SDIR/switchcolors/switchcolors.sh
+  elif [ $1 == "tokyo-night" ]
+  then
+    sed -i "s/theme=.*/theme='tokyo-night.rasi'/g" $SDIR/powermenu/powermenu.sh
+    sed -i "s/theme=.*/theme='tokyo-night.rasi'/g" $SDIR/searchmenu/searchmenu.sh
+    sed -i "s/theme=.*/theme='tokyo-night.rasi'/g" $SDIR/switchcolors/switchcolors.sh
   fi
   i3-msg reload
 }
