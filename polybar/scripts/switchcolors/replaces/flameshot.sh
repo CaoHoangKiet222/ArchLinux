@@ -10,6 +10,6 @@ function flameshot_changes() {
     flameshot config -m violet
   elif [ $1 == "tokyo-night" ]
   then
-    flameshot config -m "#7AA2F7" 
+    flameshot config -m "#A9B1D6"
   fi
 }

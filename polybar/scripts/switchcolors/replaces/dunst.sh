@@ -20,7 +20,7 @@ function dunst_changes() {
     sed -i "62 s/foreground.*/foreground = \"#f8f8f2\"/" $DUNSTDIR/dunstrc
   elif [ $1 == "tokyo-night" ]
   then
-    sed -i "s/frame_color.*/frame_color = \"#7AA2F7\"/" $DUNSTDIR/dunstrc
+    sed -i "s/frame_color.*/frame_color = \"#A9B1D6\"/" $DUNSTDIR/dunstrc
     sed -i "0,/background.*/s//background = \"#14141430\"/" $DUNSTDIR/dunstrc
     sed -i "61 s/background.*/background = \"#14141430\"/" $DUNSTDIR/dunstrc
     sed -i "0,/foreground.*/s//foreground = \"#A9B1D6\"/" $DUNSTDIR/dunstrc

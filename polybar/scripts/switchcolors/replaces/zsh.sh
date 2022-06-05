@@ -27,7 +27,7 @@ function zsh_changes() {
   elif [ $1 == "tokyo-night" ]
   then
     # replacing colorls dir and zsh-prompt
-    sed -i 's/dir: .*/dir: blue/' $COLDIR/dark_colors.yaml
+    sed -i "s/dir: .*/dir: '#A9B1D6'/" $COLDIR/dark_colors.yaml
     sed -i '36 s/yellow/blue/g' $ZSHDIR/zsh-prompt
     # replacing colors in alacritty
     sed -i 's/colors: .*/colors: *tokyo-night/g' $ADIR/alacritty.yml
