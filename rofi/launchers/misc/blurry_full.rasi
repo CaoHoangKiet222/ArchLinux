@@ -8,14 +8,7 @@ configuration {
     sidebar-mode: 					false;
 }
 
-* {
-    background:                     #00000000;
-    background-alt:              	#00000000;
-    background-bar:                 #f2f2f215;
-    foreground:                     #ebdbb2;
-    accent:			            	#fabd2f;
-    border:                    #d3869b;
-}
+@import "styles/tokyo-night.rasi"
 
 window {
     transparency:                   "real";
@@ -40,7 +33,7 @@ textbox-prompt-colon {
 	expand: 						false;
 	str: 							"(ɔ◔︣‿◔︣)ɔ ❤  𝐷𝑜𝑔𝐵𝑜𝑦 𝑁𝑜 𝑅𝑖𝑣𝑎𝑙𝑠  ❤ ʕ•́ᴥ•̀ʔっ";
 	background-color: 				transparent;
-	text-color: 					@foreground;
+	text-color: 					@element-selected;
   border:							0px 0px 4px 0px;
   border-color:					@border;
   border-radius:                  0px;
@@ -119,7 +112,7 @@ element-text {
 }
 
 element selected {
-    background-color:               @background-bar;
+    background-color:               @element-selected;
     text-color:                     @foreground;
     border:							0% 0.2% 0% 0.2%;
     border-radius:                  12px;
@@ -127,5 +120,5 @@ element selected {
 }
 
 element-text selected {
-  text-color:                     @foreground;
+  text-color:                     @element-text-selected;
 }
