@@ -10,17 +10,17 @@ function CompileAndRunFloat()
 	-- 		[[
 	--   " expand('%') uses for get full path file
 	--   " echo like return
-	--   echo printf("g++ -std=c++11 %s %s %s", expand('%'), "&& ./a.out", "&& rm -f ./a.out")
+	--   echo printf("g++ -std=c++11 %s %s %s", expand('%:d'), "&& ./a.out", "&& rm -f ./a.out")
 	-- ]],
 	-- 		true
 	-- 	)
 
 	-- vim.fn to change from lua to vimscript
-	return vim.fn.printf("g++ -std=c++11 %s %s %s", vim.fn.expand("%"), "&& ./a.out", "&& rm -f ./a.out")
+	return vim.fn.printf("g++ -std=c++11 %s %s %s", vim.fn.expand("%:p"), "&& ./a.out", "&& rm -f ./a.out")
 end
 
 function CompileAndRunWithArgvs(input)
-	return vim.fn.printf("g++ -std=c++11 %s && ./a.out %s && rm -f ./a.out", vim.fn.expand("%"), input)
+	return vim.fn.printf("g++ -std=c++11 %s && ./a.out %s && rm -f ./a.out", vim.fn.expand("%:p"), input)
 end
 
 function _CPP_COMPILE_TOGGLE()
@@ -36,7 +36,7 @@ function _CPP_COMPILE_WITH_ARGV_TOGGLE()
 	local num_of_argvs = vim.fn.input("Enter number of arguments to compile cpp: ")
 
 	if tonumber(num_of_argvs) < 0 then
-		error("Errors occur when you enter input!!")
+		print("Errors occur when you enter input!!")
 	end
 
 	local inputList = ""
@@ -54,6 +54,3 @@ function _CPP_COMPILE_WITH_ARGV_TOGGLE()
 		})
 		:toggle()
 end
---
--- vim.api.nvim_set_keymap("n", "<F1>", "<cmd>lua _CPP_COMPILE_TOGGLE()<CR>", { noremap = true, silent = true })
--- vim.api.nvim_set_keymap("n", "<F2>", "<cmd>lua _CPP_COMPILE_WITH_ARGV_TOGGLE()<CR>", { noremap = true, silent = true })
