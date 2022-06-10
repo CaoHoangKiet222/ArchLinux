@@ -103,8 +103,7 @@ return packer.startup(function(use)
 		"dracula/vim",
 		{ name = "dracula" },
 	})
-	-- use("Mofiqul/dracula.nvim")
-	use({ "morhetz/gruvbox" })
+	use({ "ellisonleao/gruvbox.nvim" })
 	use({ "drewtempelmeyer/palenight.vim" })
 	use("Roboron3042/Cyberpunk-Neon")
 	use("folke/tokyonight.nvim")
@@ -126,8 +125,17 @@ return packer.startup(function(use)
 	use("mattn/emmet-vim")
 	-- if want to use styled-components, use typescript-styled-plugin
 
+	-- Java
+	-- use("mfussenegger/nvim-jdtls")
+
 	-- Autoclose And Autorename tag
-	use("windwp/nvim-ts-autotag")
+
+	-- use("windwp/nvim-ts-autotag")
+	-- use({ "loctvl842/neo-tree.nvim", requires = {
+	-- 	"MunifTanjim/nui.nvim",
+	-- 	"loctvl842/dev-icons.nvim",
+	-- } })
+	-- use("loctvl842/vscode.nvim")
 
 	-- use("dinhhuy258/vim-database", { branch = "master" })
 

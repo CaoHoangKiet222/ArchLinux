@@ -996,7 +996,6 @@
   "python.condaPath": "$HOME/.miniconda/bin/conda",
   "python.formatting.provider": "black",
   "python.insidersChannel": "off",
-  //"terminal.integrated.shell.linux": "/bin/zsh",
   "terminal.external.linuxExec": "/usr/bin/alacritty",
   "code-runner.executorMap": {
     "python": "$pythonPath $fileName",
@@ -1110,13 +1109,9 @@
   },
   "gitlens.advanced.telemetry.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "[javascript]": {
-    // "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "emmet.showSuggestionsAsSnippets": true,
   "material-icon-theme.showWelcomeMessage": false,
   "gitlens.codeLens.enabled": false,
-  //"workbench.iconTheme": "material-icon-theme",
   "git.autofetch": true,
   "workbench.startupEditor": "newUntitledFile",
   "python.showStartPage": false,
@@ -1143,5 +1138,5 @@
   "emmet.triggerExpansionOnTab": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Dracula",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

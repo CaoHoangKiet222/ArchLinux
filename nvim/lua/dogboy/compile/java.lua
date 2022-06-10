@@ -16,11 +16,6 @@ function MySplit(inputstr, separator)
 	return t
 end
 
-function GetClassJavac()
-	local array_split = MySplit(vim.fn.expand("%:p"), "/")
-	return MySplit(array_split[#array_split], ".")[1]
-end
-
 function GetPWD()
 	local array_split = MySplit(vim.fn.expand("%:p"), "/")
 	local pwd = "/"
@@ -35,10 +30,15 @@ function GetPWD()
 	return pwd
 end
 
+function GetClassJavac()
+	local array_split = MySplit(vim.fn.expand("%:p"), "/")
+	return string.gsub(GetPWD(), "src", "bin") .. " " .. MySplit(array_split[#array_split], ".")[1]
+end
+
 function CompileAllFilesIntoClass()
 	-- javac can compile with full path
 	return vim.fn.printf(
-		"javac %s/*.java && echo 'Compile all files.java into files.class done !!!(pwd: %s)'",
+		"javac -d ../bin %s/*.java && echo 'Compile all files.java into files.class done !!!(pwd: %s)'",
 		GetPWD(),
 		GetPWD()
 	)
@@ -46,7 +46,7 @@ end
 
 function CompileAndRunFloat()
 	-- java cannot compile with full path
-	return vim.fn.printf("javac %s && java %s", vim.fn.expand("%:d"), GetClassJavac())
+	return vim.fn.printf("javac -d ../bin %s && java -cp %s", vim.fn.expand("%:d"), GetClassJavac())
 end
 
 function _JAVA_COMPILE_TOGGLE()

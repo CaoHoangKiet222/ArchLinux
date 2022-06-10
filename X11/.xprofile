@@ -1,5 +1,5 @@
 # Random Wallpaper Every Login
-feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*
+feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-TokyoNight/*
 
 # Don't Randomly Turn off
 # xset s off
@@ -11,7 +11,7 @@ pulsaudio &
 xset r rate 210 40
 
 # Picom for transparent
-picom &
+picom --experimental-backends &
 
 # Hide mouse when typing
 xbanish &
@@ -34,3 +34,4 @@ copyq &
 
 # Helps with pulsaudio
 # pasystray &
+

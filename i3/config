@@ -105,7 +105,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*"
+set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-TokyoNight/*"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1; $autoSelectWallpaper
@@ -172,7 +172,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 # for_window [title="Form"] floating disable
 
 # Examples
@@ -211,7 +211,7 @@ bindsym $mod+b exec ~/.config/i3/togglePolybar/toggle_polybar.sh
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #fabd2f
+set $ac     #A9B1D6
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f
@@ -275,3 +275,6 @@ bindsym $mod+c exec copyq menu
 
 # Change theme
 bindcode $mod+51 exec ~/.config/polybar/scripts/switchcolors/switchcolors.sh
+
+# Start conky
+exec_always ~/.conky/conky-startup.sh

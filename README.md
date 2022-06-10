@@ -62,7 +62,7 @@ sudo pacman -S ibus-bamboo
 git clone https://github.com/CaoHoangKiet222/ArchLinux.git
 ```
 
-## Gruvbox
+## Gruvbox Theme
 
 ![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/polybar/images/arch-config.png)
 ![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/polybar/images/arch-config1.png)

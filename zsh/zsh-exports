@@ -13,6 +13,8 @@ export PATH=$HOME/.fnm:$PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
+export PATH="$PATH:/opt/mssql-tools/bin"
+
 export LC_ALL=en_US.UTF-8
 # eval "$(fnm env)"
 # eval "$(zoxide init zsh)"

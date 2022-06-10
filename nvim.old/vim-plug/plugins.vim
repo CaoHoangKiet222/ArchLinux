@@ -8,14 +8,14 @@
 "
 " #################################################################################
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim.old/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim.old/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   "autocmd VimEnter * PlugInstall
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+call plug#begin('~/.config/nvim.old/autoload/plugged')
 
 " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -36,7 +36,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
 
 " Stable version of coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugin Airline and Airline themes
     Plug 'vim-airline/vim-airline'
@@ -110,6 +110,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Indent line
     Plug 'Yggdroot/indentLine'
+
 " Snippets
     Plug 'honza/vim-snippets'
 
