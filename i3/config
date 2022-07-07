@@ -39,8 +39,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill;
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "~/.config/rofi/launchers/misc/launcher.sh"
-bindsym $mod+Shift+d exec --no-startup-id "~/.config/rofi-wifi-menu/rofi-wifi-menu.sh"
+bindsym $mod+d exec ~/.config/rofi/launchers/misc/launcher.sh 
 
 # change focus
 bindsym $mod+h focus left
@@ -77,9 +76,9 @@ bindsym $mod+v split v
 bindsym $mod+space fullscreen toggle;
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+bindsym $mod+m layout tabbed
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -120,9 +119,11 @@ bindsym $mod+9 workspace number $ws9; $autoSelectWallpaper
 bindsym $mod+0 workspace number $ws10; $autoSelectWallpaper
 
 assign [class="Brave-browser"] $ws3
+assign [class="firefox"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Evince"] $ws5
 assign [class="MongoDB Compass"] $ws9
+for_window [all] focus
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1;
@@ -172,8 +173,7 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-for_window [class=".*"] border pixel 3
-# for_window [title="Form"] floating disable
+for_window [class=".*"] border pixel 1
 
 # Examples
 set $visible true
@@ -278,3 +278,9 @@ bindcode $mod+51 exec ~/.config/polybar/scripts/switchcolors/switchcolors.sh
 
 # Start conky
 exec_always ~/.conky/conky-startup.sh
+
+# Start eww
+exec --no-startup-id i3-msg "workspace 1; exec eww -c ~/.config/eww/dashboard --restart open dashboard" 
+
+# Start skippy-xd
+bindsym $mod+s exec skippy-xd --config ~/.config/skippy-xd/skippy-xd.rc 
