@@ -49,6 +49,7 @@ zsh_add_completion "esc/conda-zsh-completion" false
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
 bindkey -s '^f' 'fzf^M'
+bindkey -s '^g' 'lazygit^M'
 bindkey -s '^s' 'ncdu^M'
 # bindkey -s '^n' 'nvim $(fzf)^M'
 # bindkey -s '^v' 'nvim\n'

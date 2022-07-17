@@ -1,5 +1,5 @@
 # Random Wallpaper Every Login
-feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-TokyoNight/*
+feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*
 
 # Don't Randomly Turn off
 # xset s off
@@ -34,4 +34,3 @@ copyq &
 
 # Helps with pulsaudio
 # pasystray &
-

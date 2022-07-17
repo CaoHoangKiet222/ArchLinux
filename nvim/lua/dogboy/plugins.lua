@@ -103,7 +103,8 @@ return packer.startup(function(use)
 		"dracula/vim",
 		{ name = "dracula" },
 	})
-	use({ "ellisonleao/gruvbox.nvim" })
+	-- use({ "ellisonleao/gruvbox.nvim" })
+	use({ "morhetz/gruvbox" })
 	use({ "drewtempelmeyer/palenight.vim" })
 	use("Roboron3042/Cyberpunk-Neon")
 	use("folke/tokyonight.nvim")

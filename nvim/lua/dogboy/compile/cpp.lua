@@ -5,28 +5,28 @@ end
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-function CompileAndRunFloat()
+function CompileAndRunFloatCpp()
 	-- 	return vim.api.nvim_exec(
 	-- 		[[
 	--   " expand('%') uses for get full path file
 	--   " echo like return
-	--   echo printf("g++ -std=c++11 %s %s %s", expand('%:d'), "&& ./a.out", "&& rm -f ./a.out")
+	--   echo printf("g++ %s %s %s", expand('%:d'), "&& ./a.out", "&& rm -f ./a.out")
 	-- ]],
 	-- 		true
 	-- 	)
 
 	-- vim.fn to change from lua to vimscript
-	return vim.fn.printf("g++ -std=c++11 %s %s %s", vim.fn.expand("%:p"), "&& ./a.out", "&& rm -f ./a.out")
+	return vim.fn.printf("g++ %s %s %s", vim.fn.expand("%:p"), "&& ./a.out", "&& rm -f ./a.out")
 end
 
 function CompileAndRunWithArgvs(input)
-	return vim.fn.printf("g++ -std=c++11 %s && ./a.out %s && rm -f ./a.out", vim.fn.expand("%:p"), input)
+	return vim.fn.printf("g++ %s && ./a.out %s && rm -f ./a.out", vim.fn.expand("%:p"), input)
 end
 
 function _CPP_COMPILE_TOGGLE()
 	Terminal
 		:new({
-			cmd = CompileAndRunFloat(),
+			cmd = CompileAndRunFloatCpp(),
 			direction = "float",
 		})
 		:toggle()

@@ -46,7 +46,8 @@ end
 
 function CompileAndRunFloat()
 	-- java cannot compile with full path
-	return vim.fn.printf("javac -d ../bin %s && java -cp %s", vim.fn.expand("%:d"), GetClassJavac())
+	-- need to create src folder
+	return vim.fn.printf("javac -d ../bin %s && java -cp %s", vim.fn.expand("%:p"), GetClassJavac())
 end
 
 function _JAVA_COMPILE_TOGGLE()
