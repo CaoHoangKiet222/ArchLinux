@@ -126,18 +126,9 @@ return packer.startup(function(use)
 	use("mattn/emmet-vim")
 	-- if want to use styled-components, use typescript-styled-plugin
 
-	-- Java
-	-- use("mfussenegger/nvim-jdtls")
-
-	-- Autoclose And Autorename tag
-
-	-- use("windwp/nvim-ts-autotag")
-	-- use({ "loctvl842/neo-tree.nvim", requires = {
-	-- 	"MunifTanjim/nui.nvim",
-	-- 	"loctvl842/dev-icons.nvim",
-	-- } })
-	-- use("loctvl842/vscode.nvim")
-
+	-- Session
+	use("rmagatti/session-lens")
+	use("rmagatti/auto-session")
 	-- use("dinhhuy258/vim-database", { branch = "master" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
