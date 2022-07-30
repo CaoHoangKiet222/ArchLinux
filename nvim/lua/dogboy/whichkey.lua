@@ -87,7 +87,7 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["d"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+	["d"] = { "<cmd>wq<CR>", "Save And Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
 		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes'))<cr>",
@@ -98,7 +98,7 @@ local mappings = {
 
 	S = {
 		name = "Session",
-		o = { "<cmd>SearchSession<CR>", "Find Session" },
+		f = { "<cmd>SearchSession<CR>", "Find Session" },
 		s = { "<cmd>SaveSession<CR>", "Save Session" },
 		r = { "<cmd>RestoreSession<CR>", "Restore Session" },
 		d = { "<cmd>DeleteSession<CR>", "Delete Session" },
