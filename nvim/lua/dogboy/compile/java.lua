@@ -32,7 +32,7 @@ end
 
 function GetClassJavac()
 	local array_split = MySplit(vim.fn.expand("%:p"), "/")
-	return string.gsub(GetPWD(), "src", "bin") .. " " .. MySplit(array_split[#array_split], ".")[1]
+	return MySplit(array_split[#array_split], ".")[1]
 end
 
 function CompileAllFilesIntoClass()
@@ -47,7 +47,7 @@ end
 function CompileAndRunFloat()
 	-- java cannot compile with full path
 	-- need to create src folder
-	return vim.fn.printf("javac -d ../bin %s && java -cp %s", vim.fn.expand("%:p"), GetClassJavac())
+	return vim.fn.printf("javac -d ../bin %s/*.java && java -cp ../bin %s && rm -rf ../bin", GetPWD(), GetClassJavac())
 end
 
 function _JAVA_COMPILE_TOGGLE()
