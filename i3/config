@@ -120,6 +120,7 @@ assign [class="Brave-browser"] $ws3
 assign [class="firefox"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Evince"] $ws5
+assign [class="Code"] $ws6
 assign [class="MongoDB Compass"] $ws9
 for_window [all] focus
 
