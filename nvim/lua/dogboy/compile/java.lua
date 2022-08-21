@@ -35,31 +35,16 @@ function GetClassJavac()
 	return MySplit(array_split[#array_split], ".")[1]
 end
 
-function CompileAllFilesIntoClass()
-	-- javac can compile with full path
-	return vim.fn.printf(
-		"javac -d ../bin %s/*.java && echo 'Compile all files.java into files.class done !!!(pwd: %s)'",
-		GetPWD(),
-		GetPWD()
-	)
-end
-
 function CompileAndRunFloat()
 	-- java cannot compile with full path
-	-- need to create src folder
-	return vim.fn.printf("javac -d ../bin %s/*.java && java -cp ../bin %s && rm -rf ../bin", GetPWD(), GetClassJavac())
-end
-
-function _JAVA_COMPILE_TOGGLE()
-	Terminal
-		:new({
-			cmd = CompileAllFilesIntoClass(),
-			direction = "float",
-			on_exit = function()
-				vim.cmd("w!")
-			end,
-		})
-		:toggle()
+	return vim.fn.printf(
+		"javac -d %s/bin %s/*.java && java -cp %s/bin %s && rm -rf %s/bin",
+		GetPWD(),
+		GetPWD(),
+		GetPWD(),
+		GetClassJavac(),
+		GetPWD()
+	)
 end
 
 function _JAVA_RUN_TOGGLE()
