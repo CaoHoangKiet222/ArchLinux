@@ -47,6 +47,27 @@ function CompileAndRunFloat()
 	)
 end
 
+function CompileAndRunWithPackageFloat()
+	local package = '`grep "package" ' .. vim.fn.expand("%:p") .. " | awk '{print $2}' | sed \"s/;//\"`"
+	return vim.fn.printf(
+		"javac -d %s/bin %s/*.java && java -cp %s/bin %s && rm -rf %s/bin",
+		GetPWD(),
+		GetPWD(),
+		GetPWD(),
+		package .. "." .. GetClassJavac(),
+		GetPWD()
+	)
+end
+
+function _JAVA_RUN_WITH_PACKAGE_TOGGLE()
+	Terminal
+		:new({
+			cmd = CompileAndRunWithPackageFloat(),
+			direction = "float",
+		})
+		:toggle()
+end
+
 function _JAVA_RUN_TOGGLE()
 	Terminal
 		:new({
