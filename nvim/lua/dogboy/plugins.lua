@@ -103,8 +103,7 @@ return packer.startup(function(use)
 		"dracula/vim",
 		{ name = "dracula" },
 	})
-	-- use({ "ellisonleao/gruvbox.nvim" })
-	use({ "morhetz/gruvbox" })
+	use({ "ellisonleao/gruvbox.nvim" })
 	use({ "drewtempelmeyer/palenight.vim" })
 	use("Roboron3042/Cyberpunk-Neon")
 	use("folke/tokyonight.nvim")
@@ -129,10 +128,21 @@ return packer.startup(function(use)
 	-- Session
 	use("rmagatti/session-lens")
 	use("rmagatti/auto-session")
-	-- use("dinhhuy258/vim-database", { branch = "master" })
 
 	-- Java
 	use("mfussenegger/nvim-jdtls")
+	use("nanotee/sqls.nvim")
+	use("lighttiger2505/sqls")
+
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

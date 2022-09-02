@@ -10,6 +10,7 @@ require("dogboy.autopairs")
 require("dogboy.comment")
 require("dogboy.gitsigns")
 require("dogboy.nvim-tree")
+require("dogboy.neo-tree")
 require("dogboy.bufferline")
 require("dogboy.lualine")
 require("dogboy.toggleterm")
@@ -22,5 +23,9 @@ require("dogboy.autocommands")
 require("dogboy.colorizer")
 require("dogboy.emmet")
 require("dogboy.autotag")
+
+-- Complie
 require("dogboy.compile")
+
+--Session
 require("dogboy.session")

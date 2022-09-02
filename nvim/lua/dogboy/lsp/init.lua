@@ -6,3 +6,4 @@ end
 require("dogboy.lsp.lsp-installer")
 require("dogboy.lsp.handlers").setup()
 require("dogboy.lsp.null-ls")
+require("dogboy.lsp.nvim-lspconfig")
