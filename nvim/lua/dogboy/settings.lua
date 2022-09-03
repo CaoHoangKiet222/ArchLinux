@@ -34,7 +34,7 @@ local options = {
 	sidescrolloff = 8,
 	guifont = "Fira Code:h17", -- the font used in graphical neovim applications
 	foldmethod = "indent",
-	laststatus = 3,
+	--[[ laststatus = 3, ]]
 }
 
 vim.opt.shortmess:append("c")

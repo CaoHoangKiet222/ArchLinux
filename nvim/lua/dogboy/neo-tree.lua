@@ -3,6 +3,22 @@ if not status_ok then
 	return
 end
 
+require("window-picker").setup({
+	autoselect_one = true,
+	include_current = false,
+	filter_rules = {
+		-- filter using buffer options
+		bo = {
+			-- if the file type is one of following, the window will be ignored
+			filetype = { "neo-tree", "neo-tree-popup", "notify", "quickfix" },
+
+			-- if the buffer type is one of following, the window will be ignored
+			buftype = { "terminal" },
+		},
+	},
+	other_win_hl_color = "#e35e4f",
+})
+
 neo_tree.setup({
 	close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 	popup_border_style = "rounded",
@@ -68,7 +84,7 @@ neo_tree.setup({
 			},
 			["<2-LeftMouse>"] = "open",
 			["<cr>"] = "open",
-			["l"] = "open",
+			["l"] = "open_with_window_picker",
 			["S"] = "open_split",
 			["s"] = "open_vsplit",
 			-- ["S"] = "split_with_window_picker",

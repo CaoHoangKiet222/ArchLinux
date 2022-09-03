@@ -73,7 +73,7 @@ lualine.setup({
 			"dashboard",
 			"NvimTree",
 			"Outline",
-			--[[ "neo-tree" ]]
+			"neo-tree",
 		},
 		always_divide_middle = true,
 	},
