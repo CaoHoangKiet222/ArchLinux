@@ -14,7 +14,7 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Remarkable
-alias remarkable_ssh='ssh root@10.11.99.1'
+alias remarkable_ssh='ssh -p 22 caparies@Caparies170102'
 alias restream='restream -p'
 
 # Colorize grep output (good for log files)
@@ -26,6 +26,8 @@ alias fgrep='fgrep --color=auto'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+alias cd='function run_cd(){ cd $1; zsh };run_cd'
+
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes

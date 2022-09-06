@@ -29,3 +29,11 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
+
+zsh_prompt_home_indicator() {
+    if [[ "$PWD" = "$HOME" ]];then
+        echo " %c"
+    else
+        echo " %c"
+    fi
+}
