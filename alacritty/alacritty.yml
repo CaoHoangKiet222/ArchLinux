@@ -119,7 +119,7 @@ schemes:
       yellow:  '#e0af68'
       blue:    '#7aa2f7'
       magenta: '#ad8ee6'
-      cyan:    '#449dab'
+      cyan:    '#7aa2f7'
       white:   '#787c99'
 
     # Bright colors
@@ -162,7 +162,7 @@ schemes:
         white:   '#acb0d0'
 
 ###################################### Set Theme #####################################
-colors: *gruvbox
+colors: *dracula
 
 ###############################################      cursor      ##############################################
 ################################################################# Font configuration
@@ -174,11 +174,25 @@ font:
     family: Fira Code
     style: Bold
   italic:
-    family: Hack Nerd Font
+    family: Operator Mono SSm Lig Book
     style: Italic
   bold_italic:
-    family: Hack Nerd Font
+    family: Operator Mono
     style: Bold Italic
+
+# font:
+#   normal:
+#     family: Operator Mono Lig
+#     style: Regular
+#   bold:
+#     family: Operator Mono SSm Lig Book
+#     style: Bold
+#   italic:
+#     family: Operator Mono
+#     style: Italic
+#   bold_italic:
+#     family: Operator Mono Lig
+#     style: Bold Italic
 
   # Point size
   size: 9
