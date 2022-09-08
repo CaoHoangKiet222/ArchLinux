@@ -30,7 +30,7 @@ function zsh_add_completion() {
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
-zsh_prompt_home_indicator() {
+function zsh_prompt_home_indicator() {
     if [[ "$PWD" = "$HOME" ]];then
         echo " %c"
     else
