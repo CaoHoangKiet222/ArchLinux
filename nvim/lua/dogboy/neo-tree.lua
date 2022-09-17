@@ -37,7 +37,7 @@ neo_tree.setup({
 			highlight = "NeoTreeIndentMarker",
 		},
 		icon = {
-			folder_closed = " ",
+			folder_closed = " ",
 			folder_open = " ",
 			folder_empty = " ",
 			-- The next two settings are only a fallback, if you use dev-icons and configure default icons there
@@ -85,8 +85,8 @@ neo_tree.setup({
 			["<2-LeftMouse>"] = "open",
 			["<cr>"] = "open",
 			["l"] = "open_with_window_picker",
-			["S"] = "open_split",
-			["s"] = "open_vsplit",
+			["S"] = "split_with_window_picker",
+			["s"] = "vsplit_with_window_picker",
 			-- ["S"] = "split_with_window_picker",
 			-- ["s"] = "vsplit_with_window_picker",
 			["t"] = "open_tabnew",

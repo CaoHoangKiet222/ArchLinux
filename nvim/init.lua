@@ -29,3 +29,7 @@ require("dogboy.compile")
 
 --Session
 require("dogboy.session")
+
+if vim.fn.exists("g:vscode") ~= 0 then
+	vim.cmd("source ~/.config/nvim/lua/dogboy/vscode/settings.vim")
+end
