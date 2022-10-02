@@ -129,6 +129,12 @@ local config = {
 			},
 			configuration = {
 				updateBuildConfiguration = "interactive",
+				runtimes = {
+					{
+						name = "JavaSE-18",
+						path = "/usr/lib/jvm/java-18-openjdk/",
+					},
+				},
 			},
 			maven = {
 				downloadSources = true,
@@ -194,8 +200,7 @@ local config = {
 	--
 	-- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
 	init_options = {
-		-- bundles = {},
-		bundles = bundles,
+		bundles = {},
 	},
 }
 

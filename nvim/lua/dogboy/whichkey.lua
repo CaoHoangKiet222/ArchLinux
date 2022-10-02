@@ -78,6 +78,15 @@ local opts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 
+local vopts = {
+	mode = "v", -- VISUAL mode
+	prefix = "<leader>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
@@ -136,7 +145,6 @@ local mappings = {
 			"Diff",
 		},
 	},
-
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -194,7 +202,21 @@ local mappings = {
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 		t = { "<cmd>ToggleTerm direction=tab<cr>", "Tab" },
 	},
+	j = {
+		name = "Java",
+		--[[ o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" }, ]]
+		--[[ v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" }, ]]
+		--[[ c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" }, ]]
+		--[[ t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" }, ]]
+		--[[ T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" }, ]]
+		u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
+		s = { "<Cmd>JdtShowLogs<CR>", "Show Logs" },
+		b = { "<Cmd>JdtBytecode<CR>", "Byte Code" },
+		r = { "<Cmd>JdtSetRuntime<CR>", "Run Time" },
+		w = { "<Cmd>JdtWipeDataAndRestart<CR>", "Wipe Restart" },
+	},
 }
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+--[[ which_key.register(mappings, vopts) ]]

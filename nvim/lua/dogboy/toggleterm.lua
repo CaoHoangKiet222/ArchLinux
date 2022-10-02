@@ -18,7 +18,7 @@ toggleterm.setup({
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
-		winblend = 0,
+		winblend = 10,
 		highlights = {
 			border = "Normal",
 			background = "Normal",
