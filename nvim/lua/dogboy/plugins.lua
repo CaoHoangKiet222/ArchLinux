@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	--[[ use("kyazdani42/nvim-tree.lua") ]]
 	use("akinsho/bufferline.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
 	use("moll/vim-bbye")
@@ -87,6 +87,7 @@ return packer.startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
 	-- Treesitter
 	use({
@@ -94,6 +95,21 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	-- Neotree
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+			{
+				"s1n7ax/nvim-window-picker",
+				tag = "v1.*",
+			},
+		},
+	})
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
@@ -121,6 +137,9 @@ return packer.startup(function(use)
 		{ branch = "master" },
 	})
 
+	-- Notify
+	use("rcarriga/nvim-notify")
+
 	-- React
 	use("mattn/emmet-vim")
 	-- if want to use styled-components, use typescript-styled-plugin
@@ -131,22 +150,10 @@ return packer.startup(function(use)
 
 	-- Java
 	use("mfussenegger/nvim-jdtls")
+
+	-- Sql
 	use("nanotee/sqls.nvim")
 	use("lighttiger2505/sqls")
-
-	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-			{
-				"s1n7ax/nvim-window-picker",
-				tag = "v1.*",
-			},
-		},
-	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
