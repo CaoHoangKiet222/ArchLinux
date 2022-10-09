@@ -84,7 +84,7 @@ keymap("n", "<leader>\\", ":vsplit<CR>", opts)
 keymap("n", "<leader>/", ":split<CR>", opts)
 
 -- Autoformat
-keymap("n", "<C-f>", ":lua vim.lsp.buf.formatting()<CR>", opts)
+keymap("n", "<C-f>", ":lua vim.lsp.buf.format({async = true})<CR>", opts)
 
 -- Don't allow to use up down left right
 keymap("n", "<Up>", ":echo 'Use k'<CR>", opts)

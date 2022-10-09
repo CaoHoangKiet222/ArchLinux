@@ -8,14 +8,16 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
+local code_actions = null_ls.builtins.code_actions
+
 null_ls.setup({
 	debug = false,
 	on_attach = function(client)
-		if client.resolved_capabilities.document_formatting then
+		if client.server_capabilities.documentFormattingProvider then
 			vim.cmd([[
             augroup LspFormatting
                 autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
             augroup END
             ]])
 		end
@@ -26,6 +28,8 @@ null_ls.setup({
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		formatting.google_java_format,
-		diagnostics.flake8,
+		--[[ diagnostics.flake8, ]]
+		diagnostics.semgrep.with({ extra_args = { "--config", "auto" } }),
+		code_actions.eslint,
 	},
 })

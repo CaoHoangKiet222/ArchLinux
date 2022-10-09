@@ -119,11 +119,14 @@ local config = {
 	-- for a list of options
 	settings = {
 		java = {
-			-- jdt = {
-			--   ls = {
-			--     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
-			--   }
-			-- },
+			jdt = {
+				ls = {
+					--[[ vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m" ]]
+					--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
+					--[[ 	.. home ]]
+					--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
+				},
+			},
 			eclipse = {
 				downloadSources = true,
 			},
@@ -155,9 +158,6 @@ local config = {
 			},
 			format = {
 				enabled = false,
-				-- settings = {
-				--   profile = "asdf"
-				-- }
 			},
 		},
 		signatureHelp = { enabled = true },
