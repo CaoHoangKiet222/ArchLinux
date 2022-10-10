@@ -42,6 +42,8 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 local workspace_dir = WORKSPACE_PATH .. project_name
 
+local jdtls_dir = "/.local/share/nvim/mason/packages/jdtls"
+
 -- TODO: Testing
 
 JAVA_DAP_ACTIVE = true
@@ -77,7 +79,10 @@ local config = {
 		"-Declipse.product=org.eclipse.jdt.ls.core.product",
 		"-Dlog.protocol=true",
 		"-Dlog.level=ALL",
-		"-javaagent:" .. home .. "/.local/share/nvim/lsp_servers/jdtls/lombok.jar",
+		"-javaagent:" .. home .. jdtls_dir .. "/lombok.jar",
+		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
+		--[[ 	.. home ]]
+		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
 		"-Xms1g",
 		"--add-modules=ALL-SYSTEM",
 		"--add-opens",
@@ -87,14 +92,20 @@ local config = {
 
 		-- 💀
 		"-jar",
-		vim.fn.glob(home .. "/.local/share/nvim/lsp_servers/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
+		vim.fn.glob(home .. jdtls_dir .. "/plugins/org.eclipse.equinox.launcher_*.jar"),
+		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
+		--[[ 	.. home ]]
+		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
 		-- Must point to the                                                     Change this to
 		-- eclipse.jdt.ls installation                                           the actual version
 
 		-- 💀
 		"-configuration",
-		home .. "/.local/share/nvim/lsp_servers/jdtls/config_" .. CONFIG,
+		home .. jdtls_dir .. "/config_" .. CONFIG,
+		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
+		--[[ 	.. home ]]
+		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
 		-- Must point to the                      Change to one of `linux`, `win` or `mac`
 		-- eclipse.jdt.ls installation            Depending on your system.
@@ -122,9 +133,6 @@ local config = {
 			jdt = {
 				ls = {
 					--[[ vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m" ]]
-					--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
-					--[[ 	.. home ]]
-					--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
 				},
 			},
 			eclipse = {
