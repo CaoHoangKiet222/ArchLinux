@@ -42,7 +42,7 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 local workspace_dir = WORKSPACE_PATH .. project_name
 
-local jdtls_dir = "/.local/share/nvim/mason/packages/jdtls"
+local jdtls_dir = home .. "/.local/share/nvim/mason/packages/jdtls"
 
 -- TODO: Testing
 
@@ -79,7 +79,7 @@ local config = {
 		"-Declipse.product=org.eclipse.jdt.ls.core.product",
 		"-Dlog.protocol=true",
 		"-Dlog.level=ALL",
-		"-javaagent:" .. home .. jdtls_dir .. "/lombok.jar",
+		"-javaagent:" .. jdtls_dir .. "/lombok.jar",
 		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
 		--[[ 	.. home ]]
 		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
@@ -92,7 +92,7 @@ local config = {
 
 		-- 💀
 		"-jar",
-		vim.fn.glob(home .. jdtls_dir .. "/plugins/org.eclipse.equinox.launcher_*.jar"),
+		vim.fn.glob(jdtls_dir .. "/plugins/org.eclipse.equinox.launcher_*.jar"),
 		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
 		--[[ 	.. home ]]
 		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
@@ -102,7 +102,7 @@ local config = {
 
 		-- 💀
 		"-configuration",
-		home .. jdtls_dir .. "/config_" .. CONFIG,
+		jdtls_dir .. "/config_" .. CONFIG,
 		--[[ vmargs = "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:" ]]
 		--[[ 	.. home ]]
 		--[[ 	.. "/.m2/repository/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar", ]]
