@@ -156,7 +156,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
@@ -214,6 +214,12 @@ local mappings = {
 		b = { "<Cmd>JdtBytecode<CR>", "Byte Code" },
 		r = { "<Cmd>JdtSetRuntime<CR>", "Run Time" },
 		w = { "<Cmd>JdtWipeDataAndRestart<CR>", "Wipe Restart" },
+	},
+	m = {
+		name = "Markdown PreView",
+		p = { "<Cmd>MarkdownPreview<CR>", "Markdown Preview" },
+		s = { "<Cmd>MarkdownPreviewStop<CR>", "Markdown Preview Stop" },
+		t = { "<Cmd>MarkdownPreviewToggle<CR>", "Markdown Preview Toggle" },
 	},
 }
 
