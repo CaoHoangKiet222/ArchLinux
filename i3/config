@@ -117,12 +117,16 @@ bindsym $mod+9 workspace number $ws9; $autoSelectWallpaper
 bindsym $mod+0 workspace number $ws10; $autoSelectWallpaper
 
 assign [class="Brave-browser"] $ws3
+assign [class="Docker Desktop"] $ws7
+assign [class="jetbrains-studio"] $ws8
+assign [class="Postman"] $ws5
 assign [class="firefox"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Evince"] $ws5
 assign [class="Code"] $ws6
 assign [class="MongoDB Compass"] $ws9
 for_window [all] focus
+for_window [title=".*Emulator.*"] floating enable
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1;
