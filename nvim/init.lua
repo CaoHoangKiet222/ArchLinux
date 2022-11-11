@@ -24,6 +24,7 @@ require("dogboy.colorizer")
 require("dogboy.emmet")
 require("dogboy.autotag")
 require("dogboy.notify")
+require("dogboy.winbar")
 
 -- Complie
 require("dogboy.compile")

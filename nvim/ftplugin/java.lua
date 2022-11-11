@@ -142,8 +142,8 @@ local config = {
 				updateBuildConfiguration = "interactive",
 				runtimes = {
 					{
-						name = "JavaSE-18",
-						path = "/usr/lib/jvm/java-18-openjdk/",
+						name = "JavaSE-10",
+						path = "/usr/lib/jvm/java-19-openjdk/",
 					},
 				},
 			},

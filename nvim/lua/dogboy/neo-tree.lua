@@ -24,6 +24,16 @@ neo_tree.setup({
 	popup_border_style = "rounded",
 	enable_git_status = true,
 	enable_diagnostics = true,
+	source_selector = {
+		winbar = true,
+		content_layout = "center",
+		tab_labels = {
+			filesystem = "" .. " File",
+			buffers = "" .. " Bufs",
+			git_status = "" .. " Git",
+			diagnostics = "裂" .. " Diagnostic",
+		},
+	},
 	default_component_configs = {
 		container = {
 			enable_character_fade = true,
