@@ -10,6 +10,7 @@ function polybar_changes() {
     sed -i 's/foreground = .*/foreground = #ebdbb2/g' $PCDIR/colors.ini
     sed -i 's/border = .*/border = #fabd2f/g' $PCDIR/colors.ini
     sed -i 's/xwindow = .*/xwindow = #ffffff/g' $PCDIR/colors.ini
+    sed -i 's/cava = .*/cava = #fabd2f/g' $PCDIR/colors.ini
     sed -i 's/powermenu = .*/powermenu = #fa0025/g' $PCDIR/colors.ini
     sed -i 's/i3-separator = .*/i3-separator = #ffffff/g' $PCDIR/colors.ini
     sed -i 's/date-foreground = .*/date-foreground = #FFAB91/g' $PCDIR/colors.ini
@@ -30,6 +31,7 @@ function polybar_changes() {
     sed -i 's/foreground = .*/foreground = #f8f8f2/g' $PCDIR/colors.ini
     sed -i 's/border = .*/border = #ff00ff/g' $PCDIR/colors.ini
     sed -i 's/xwindow = .*/xwindow = #ffffff/g' $PCDIR/colors.ini
+    sed -i 's/cava = .*/cava = #ff00ff/g' $PCDIR/colors.ini
     sed -i 's/powermenu = .*/powermenu = #ff00ff/g' $PCDIR/colors.ini
     sed -i 's/i3-separator = .*/i3-separator = #ffffff/g' $PCDIR/colors.ini
     sed -i 's/date-foreground = .*/date-foreground = #e6e6e6/g' $PCDIR/colors.ini
@@ -50,6 +52,7 @@ function polybar_changes() {
     sed -i 's/foreground = .*/foreground = #A9B1D6/g' $PCDIR/colors.ini
     sed -i 's/border = .*/border = #A9B1D6/g' $PCDIR/colors.ini
     sed -i 's/xwindow = .*/xwindow = #ffffff/g' $PCDIR/colors.ini
+    sed -i 's/cava = .*/cava = #A9B1D6/g' $PCDIR/colors.ini
     sed -i 's/powermenu = .*/powermenu = #F7768E/g' $PCDIR/colors.ini
     sed -i 's/i3-separator = .*/i3-separator = #ffffff/g' $PCDIR/colors.ini
     sed -i 's/date-foreground = .*/date-foreground = #73DACA/g' $PCDIR/colors.ini

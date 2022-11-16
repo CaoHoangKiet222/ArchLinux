@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SDIR="$HOME/.config/polybar/scripts/switchcolors"
-theme='dracula.rasi'
+theme='tokyo-night.rasi'
 THEME="$HOME/.config/polybar/scripts/switchcolors/styles/$theme"
 
 MENU="$(rofi -sep "|" \
