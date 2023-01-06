@@ -161,7 +161,7 @@ return packer.startup(function(use)
 	use({ "iamcco/markdown-preview.nvim" })
 
 	-- Winbar
-	use("fgheng/winbar.nvim")
+	--[[ use("fgheng/winbar.nvim") ]]
 	-- need neovim v8
 
 	-- Automatically set up your configuration after cloning packer.nvim

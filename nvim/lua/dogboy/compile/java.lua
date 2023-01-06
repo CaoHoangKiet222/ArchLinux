@@ -60,19 +60,15 @@ function CompileAndRunWithPackageFloat()
 end
 
 function _JAVA_RUN_WITH_PACKAGE_TOGGLE()
-	Terminal
-		:new({
-			cmd = CompileAndRunWithPackageFloat(),
-			direction = "float",
-		})
-		:toggle()
+	Terminal:new({
+		cmd = CompileAndRunWithPackageFloat(),
+		direction = "float",
+	}):toggle()
 end
 
 function _JAVA_RUN_TOGGLE()
-	Terminal
-		:new({
-			cmd = CompileAndRunFloat(),
-			direction = "float",
-		})
-		:toggle()
+	Terminal:new({
+		cmd = CompileAndRunFloat(),
+		direction = "float",
+	}):toggle()
 end

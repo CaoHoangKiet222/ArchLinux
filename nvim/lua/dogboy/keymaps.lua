@@ -105,6 +105,7 @@ keymap("n", "<A-o>", "<C-w>r", opts)
 keymap("n", "<C-s>", "<Cmd>source ~/.config/nvim/lua/dogboy/colorscheme.lua<CR>", opts)
 
 -- Folding command
-keymap("n", "fa", "zA", opts)
+keymap("n", "fA", "zA", opts)
+keymap("n", "fa", "za", opts)
 keymap("n", "fc", "zM", opts)
 keymap("n", "fo", "zR", opts)

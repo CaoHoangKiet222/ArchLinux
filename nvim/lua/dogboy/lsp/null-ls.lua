@@ -25,13 +25,14 @@ null_ls.setup({
 	sources = {
 		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.prettier.with({ extra_args = {} }),
-		formatting.black.with({ extra_args = { "--fast" } }),
+		--[[ formatting.black.with({ extra_args = { "--fast" } }), ]]
+		formatting.autopep8,
 		formatting.stylua,
 		--[[ formatting.google_java_format, ]]
 		formatting.clang_format,
 		formatting.tidy,
-		diagnostics.flake8,
-		diagnostics.semgrep.with({ extra_args = { "--config", "auto" } }),
+		--[[ diagnostics.flake8, ]]
+		--[[ diagnostics.semgrep.with({ extra_args = { "--config", "auto" } }), ]]
 		diagnostics.eslint,
 		diagnostics.markdownlint_cli2,
 	},

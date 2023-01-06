@@ -52,6 +52,7 @@ winbar.setup({
 		"dashboard",
 		"packer",
 		"neogitstatus",
+		"neo-tree",
 		"NvimTree",
 		"Trouble",
 		"alpha",

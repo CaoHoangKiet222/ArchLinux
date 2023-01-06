@@ -24,7 +24,7 @@ require("dogboy.colorizer")
 require("dogboy.emmet")
 require("dogboy.autotag")
 require("dogboy.notify")
-require("dogboy.winbar")
+--[[ require("dogboy.winbar") ]]
 
 -- Complie
 require("dogboy.compile")
@@ -32,6 +32,6 @@ require("dogboy.compile")
 --Session
 require("dogboy.session")
 
-if vim.fn.exists("g:vscode") ~= 0 then
-	vim.cmd("source ~/.config/nvim/lua/dogboy/vscode/settings.vim")
-end
+--[[ if vim.fn.exists("g:vscode") ~= 0 then ]]
+--[[ 	vim.cmd("source ~/.config/nvim/lua/dogboy/vscode/settings.vim") ]]
+--[[ end ]]

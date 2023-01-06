@@ -24,12 +24,10 @@ function CompileAndRunWithArgvs(input)
 end
 
 function _CPP_COMPILE_TOGGLE()
-	Terminal
-		:new({
-			cmd = CompileAndRunFloatCpp(),
-			direction = "float",
-		})
-		:toggle()
+	Terminal:new({
+		cmd = CompileAndRunFloatCpp(),
+		direction = "float",
+	}):toggle()
 end
 
 function _CPP_COMPILE_WITH_ARGV_TOGGLE()
@@ -47,10 +45,8 @@ function _CPP_COMPILE_WITH_ARGV_TOGGLE()
 		end
 	end
 
-	Terminal
-		:new({
-			cmd = CompileAndRunWithArgvs(inputList),
-			direction = "float",
-		})
-		:toggle()
+	Terminal:new({
+		cmd = CompileAndRunWithArgvs(inputList),
+		direction = "float",
+	}):toggle()
 end
