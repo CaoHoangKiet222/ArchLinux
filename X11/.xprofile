@@ -1,11 +1,11 @@
 # Random Wallpaper Every Login
-feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*
+feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Dracula/*
 
 # Don't Randomly Turn off
 # xset s off
 # xset -dpms
 # xset s noblank
-pulsaudio &
+pulsaudio -D
 
 # Speedy keys
 xset r rate 210 40
