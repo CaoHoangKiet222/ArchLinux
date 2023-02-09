@@ -8,7 +8,7 @@ configuration {
     sidebar-mode: 					false;
 }
 
-@import "styles/gruvbox.rasi"
+@import "styles/dracula.rasi"
 
 window {
     transparency:                   "real";
