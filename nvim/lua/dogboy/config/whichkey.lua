@@ -113,7 +113,8 @@ local mappings = {
   },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["Q"] = { "<cmd>qa!<CR>", "Quit All" },
-  ["d"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  -- ["d"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["d"] = { "<cmd>q!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["c"] = {
     "<cmd>MonokaiProSelect<CR>",
@@ -172,36 +173,36 @@ local mappings = {
       "Workspace Symbols",
     },
   },
-	t = {
-		name = "Terminal",
-		N = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-		U = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-		T = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-		P = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-		t = { "<cmd>ToggleTerm direction=tab<cr>", "Tab" },
-	},
-	j = {
-		name = "Java",
-		--[[ o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" }, ]]
-		--[[ v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" }, ]]
-		--[[ c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" }, ]]
-		--[[ t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" }, ]]
-		--[[ T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" }, ]]
-		u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
-		s = { "<Cmd>JdtShowLogs<CR>", "Show Logs" },
-		b = { "<Cmd>JdtBytecode<CR>", "Byte Code" },
-		r = { "<Cmd>JdtSetRuntime<CR>", "Run Time" },
-		w = { "<Cmd>JdtWipeDataAndRestart<CR>", "Wipe Restart" },
-	},
-	m = {
-		name = "Markdown PreView",
-		p = { "<Cmd>MarkdownPreview<CR>", "Markdown Preview" },
-		s = { "<Cmd>MarkdownPreviewStop<CR>", "Markdown Preview Stop" },
-		t = { "<Cmd>MarkdownPreviewToggle<CR>", "Markdown Preview Toggle" },
-	},
+  t = {
+    name = "Terminal",
+    N = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    U = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+    T = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+    P = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    t = { "<cmd>ToggleTerm direction=tab<cr>", "Tab" },
+  },
+  j = {
+    name = "Java",
+    --[[ o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" }, ]]
+    --[[ v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" }, ]]
+    --[[ c = { "<Cmd>lua require('jdtls').extract_constant()<CR>", "Extract Constant" }, ]]
+    --[[ t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", "Test Method" }, ]]
+    --[[ T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "Test Class" }, ]]
+    u = { "<Cmd>JdtUpdateConfig<CR>", "Update Config" },
+    s = { "<Cmd>JdtShowLogs<CR>", "Show Logs" },
+    b = { "<Cmd>JdtBytecode<CR>", "Byte Code" },
+    r = { "<Cmd>JdtSetRuntime<CR>", "Run Time" },
+    w = { "<Cmd>JdtWipeDataAndRestart<CR>", "Wipe Restart" },
+  },
+  m = {
+    name = "Markdown PreView",
+    p = { "<Cmd>MarkdownPreview<CR>", "Markdown Preview" },
+    s = { "<Cmd>MarkdownPreviewStop<CR>", "Markdown Preview Stop" },
+    t = { "<Cmd>MarkdownPreviewToggle<CR>", "Markdown Preview Toggle" },
+  },
 }
 which_key.register(mappings, opts)
 

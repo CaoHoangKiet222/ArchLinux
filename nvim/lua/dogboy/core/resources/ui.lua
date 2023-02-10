@@ -105,19 +105,23 @@ return {
     end,
   },
 
-  {
-    "anuvyklack/windows.nvim",
-    event = "WinNew",
-    dependencies = {
-      { "anuvyklack/middleclass" },
-      { "anuvyklack/animation.nvim", enabled = true },
-    },
-    config = function() require("dogboy.config.windows") end,
-  },
+  -- {
+  --   "anuvyklack/windows.nvim",
+  --   event = "WinNew",
+  --   dependencies = {
+  --     { "anuvyklack/middleclass" },
+  --     { "anuvyklack/animation.nvim", enabled = true },
+  --   },
+  --   config = function() require("dogboy.config.windows") end,
+  -- },
 
   {
     "NvChad/nvim-colorizer.lua",
     event = "BufReadPre",
     config = function() require("dogboy.config.colorizer") end,
+    {
+      "s1n7ax/nvim-window-picker",
+      config = function() require("window-picker").setup() end,
+    },
   },
 }

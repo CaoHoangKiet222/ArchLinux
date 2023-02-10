@@ -31,6 +31,7 @@ keymap("n", "<A-S-h>", ":BufferLineMovePrev<CR>", opts)
 
 -------------------- Press jk fast to enter --------------------
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 keymap("i", "Jk", "<ESC>", opts)
 keymap("i", "jK", "<ESC>", opts)
 keymap("i", "JK", "<ESC>", opts)
@@ -92,8 +93,16 @@ keymap("n", "<c-m-n>", "<cmd>only | Compile<CR>", opts)
 -------------------- Inspect --------------------------------
 keymap("n", "<F2>", "<cmd>Inspect<CR>", opts)
 
+-------------------- Don't allow to use up down left right ------
+keymap("n", "<Up>", ":echo 'Use k'<CR>", opts)
+keymap("n", "<Down>", ":echo 'Use j'<CR>", opts)
+keymap("n", "<Left>", ":echo 'Use h'<CR>", opts)
+keymap("n", "<Right>", ":echo 'Use l'<CR>", opts)
+
 -------------------- Fuzzy Search --------------------------------
 vim.keymap.set("n", "<C-f>", function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
-  require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes"))
+  require("telescope.builtin").current_buffer_fuzzy_find(
+    require("telescope.themes")
+  )
 end, { desc = "[/] Fuzzily search in current buffer]" })
