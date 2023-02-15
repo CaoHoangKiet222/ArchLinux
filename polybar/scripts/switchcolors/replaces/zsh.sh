@@ -3,7 +3,14 @@
 ZSHDIR="$HOME/.config/zsh"
 COLDIR="$HOME/.config/colorls"
 ADIR="$HOME/.config/alacritty"
-NDIR="$HOME/.config/nvim/lua/dogboy"
+NDIR_PACKER="$HOME/.config/nvim.packer/lua/dogboy"
+NDIR_LAZY="$HOME/.config/nvim/lua/dogboy/config"
+
+zsh_alpha_changes() {
+  sed -i "s/dashboard.section.footer.opts.hl = .*/dashboard.section.footer.opts.hl = \"$1\"/" $NDIR_LAZY/alpha.lua
+  sed -i "s/dashboard.section.header.opts.hl = .*/dashboard.section.header.opts.hl = \"$2\"/" $NDIR_LAZY/alpha.lua
+  sed -i "s/dashboard.section.buttons.opts.hl = .*/dashboard.section.buttons.opts.hl = \"$3\"/" $NDIR_LAZY/alpha.lua
+}
 
 function zsh_changes() {
   if [ $1 == "gruvbox" ]
@@ -14,7 +21,9 @@ function zsh_changes() {
     # replacing colors in alacritty
     sed -i 's/colors: .*/colors: *gruvbox/g' $ADIR/alacritty.yml
     # replacing theme in neovim
-    sed -i '0,/colorscheme .*/s//colorscheme gruvbox/' $NDIR/colorscheme.lua
+    sed -i '0,/colorscheme .*/s//colorscheme gruvbox/' $NDIR_PACKER/colorscheme.lua
+    sed -i 's/colorscheme .*/colorscheme monokai-pro/g' $NDIR_LAZY/lualine.lua
+    zsh_alpha_changes "AlphaFooter" "AlphaHeader" "AlphaButton"
   elif [ $1 == "dracula" ]
   then
     # replacing colorls dir and zsh-prompt
@@ -23,7 +32,9 @@ function zsh_changes() {
     # replacing colors in alacritty
     sed -i 's/colors: .*/colors: *dracula/g' $ADIR/alacritty.yml
     # replacing theme in neovim
-    sed -i '0,/colorscheme .*/s//colorscheme dracula/' $NDIR/colorscheme.lua
+    sed -i '0,/colorscheme .*/s//colorscheme dracula/' $NDIR_PACKER/colorscheme.lua
+    sed -i 's/colorscheme .*/colorscheme dracula/g' $NDIR_LAZY/lualine.lua
+    zsh_alpha_changes "Type" "Include" "Keyword"
   elif [ $1 == "tokyo-night" ]
   then
     # replacing colorls dir and zsh-prompt
@@ -32,7 +43,9 @@ function zsh_changes() {
     # replacing colors in alacritty
     sed -i 's/colors: .*/colors: *tokyo-night/g' $ADIR/alacritty.yml
     # replacing theme in neovim
-    sed -i '0,/colorscheme .*/s//colorscheme tokyonight/' $NDIR/colorscheme.lua
+    sed -i '0,/colorscheme .*/s//colorscheme tokyonight/' $NDIR_PACKER/colorscheme.lua
+    sed -i 's/colorscheme .*/colorscheme tokyonight/g' $NDIR_LAZY/lualine.lua
+    zsh_alpha_changes "Type" "Include" "Keyword"
   fi
   i3-msg reload
 }
