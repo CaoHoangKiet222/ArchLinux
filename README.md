@@ -35,6 +35,16 @@ git clone https://github.com/mwh/dragon.git; cd dragon; make install
 sudo pacman -Sy ueberzug
 ```
 
+### Alacritty ligatures :stuck_out_tongue_winking_eye:
+
+```
+git clone https://github.com/zenixls2/alacritty; cd alacritty
+git checkout ligature
+cargo build --release
+sudo mv /usr/bin/alacritty /usr/bin/alacritty.bak
+sudo cp ./target/release/alacritty /usr/bin
+```
+
 ### Polybar Config 🌇
 
 ```
