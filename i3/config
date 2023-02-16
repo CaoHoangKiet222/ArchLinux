@@ -102,7 +102,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Dracula/*"
+set $autoSelectWallpaper exec "feh --bg-fill --randomize ~/.config/Pictures/Wallpapers-Gruvbox/*"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1; $autoSelectWallpaper
@@ -212,7 +212,7 @@ gaps top 35
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #EE82EE
+set $ac     #fabd2f
 set $tx     #040404
 set $ia     #8f8f8f
 set $be     #8faf9f
@@ -290,3 +290,6 @@ bindsym $mod+s exec skippy-xd --config ~/.config/skippy-xd/skippy-xd.rc
 bindsym $mod+b exec ~/.config/i3/togglePolybar/toggle_polybar.sh
 
 bindsym $mod+Shift+d exec ~/.config/rofi-wifi-menu/rofi-wifi-menu.sh
+
+# Gipck
+bindsym $mod+g exec gpick -s -o
