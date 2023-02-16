@@ -53,4 +53,7 @@ return {
     "rmagatti/session-lens",
     config = function() require("dogboy.config.session-lens") end,
   },
+  {
+    "iamcco/markdown-preview.nvim",
+  },
 }
