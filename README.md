@@ -25,6 +25,14 @@ sudo pacman -Sy java java-runtime-common java-environment-common jdk-openjdk jre
 sudo npm install markdownlint-cli2 -g
 ```
 
+### Markdown-preview :zap:
+
+```
+sudo npm install markdownlint-cli2 -g
+cd .local/share/nvim/site/pack/packer/start/markdown-preview.nvim/
+yarn install
+```
+
 ### Ranger :satisfied:
 
 - Drag, drop, image preview and icons
