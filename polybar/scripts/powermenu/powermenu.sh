@@ -1,6 +1,6 @@
 #!/bin/bash
 
-theme="gruvbox.rasi"
+theme='tokyo-night.rasi'
 THEME="$HOME/.config/polybar/scripts/powermenu/$theme"
 
 MENU="$(rofi -sep "|" \
