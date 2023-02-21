@@ -99,11 +99,11 @@ dashboard.section.buttons.val = {
 -- dashboard.section.buttons.type = "button"
 
 -- "Type", "AlphaFooter"
-dashboard.section.footer.opts.hl = "AlphaFooter"
+dashboard.section.footer.opts.hl = "Type"
 -- "Include", "AlphaHeader"
-dashboard.section.header.opts.hl = "AlphaHeader"
+dashboard.section.header.opts.hl = "Include"
 -- "Keyword", "AlphaButton"
-dashboard.section.buttons.opts.hl = "AlphaButton"
+dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.opts.layout[1].val = 1
 
 -- close Lazy and re-open when the dashboard is ready
