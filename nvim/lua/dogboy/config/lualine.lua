@@ -102,5 +102,5 @@ lualine.setup({
   extensions = {},
 })
 vim.cmd([[
-  colorscheme tokyonight
+  colorscheme dracula
 ]])

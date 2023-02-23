@@ -4,7 +4,7 @@ return {
     "nvim-telescope/telescope.nvim",
     config = function() require("dogboy.config.telescope") end,
   },
-{"nvim-telescope/telescope-ui-select.nvim"},
+  { "nvim-telescope/telescope-ui-select.nvim" },
 
   {
     "folke/which-key.nvim",
@@ -56,5 +56,4 @@ return {
       },
     },
   },
-
 }
