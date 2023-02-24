@@ -3,7 +3,7 @@
 ### **Dependencies** 📊
 
 ```
-sudo pacman -Sy neovim rofi polybar zsh ranger alacritty dunst copyq feh flameshot pasystray network-manager-applet networkmanager pamixer pulseaudio light gpick gnome-keyring yad
+sudo pacman -Sy neovim rofi polybar zsh ranger alacritty dunst copyq feh flameshot pasystray network-manager-applet networkmanager pamixer pulseaudio light gpick gnome-keyring yad xdotool
 ```
 
 ```
