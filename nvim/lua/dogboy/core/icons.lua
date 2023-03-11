@@ -90,7 +90,7 @@ return {
     Ellipsis = "…",
     EmptyFolder = "",
     EmptyFolderOpen = "",
-    File = "",
+    File = "sss",
     FileSymlink = "",
     Files = "",
     FindFile = "",

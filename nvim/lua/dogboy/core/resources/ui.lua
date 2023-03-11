@@ -36,23 +36,23 @@ return {
     config = function() require("dogboy.config.indent-blankline") end,
   },
 
-  {
-    "goolord/alpha-nvim",
-    event = "VimEnter",
-    config = function() require("dogboy.config.alpha") end,
-  },
-
   -- {
-  --   "glepnir/dashboard-nvim",
-  --   lazy = false,
+  --   "goolord/alpha-nvim",
   --   event = "VimEnter",
-  --   -- dependencies = { { "nvim-tree/nvim-web-devicons" } },
-  --   config = function() require("dogboy.config.dashboard") end,
+  --   config = function() require("dogboy.config.alpha") end,
   -- },
 
   {
+    "glepnir/dashboard-nvim",
+    lazy = false,
+    event = "VimEnter",
+    -- dependencies = { { "nvim-tree/nvim-web-devicons" } },
+    config = function() require("dogboy.config.dashboard") end,
+  },
+
+  {
     "nvim-tree/nvim-web-devicons",
-    -- config = function() require("dogboy.config.nvim-web-devicons") end,
+    config = function() require("dogboy.config.nvim-web-devicons") end,
   },
 
   {
