@@ -65,7 +65,6 @@ return {
     dependencies = {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons",
-      "loctvl842/monokai-pro.nvim",
     },
     config = function() require("dogboy.config.barbecue") end,
   },

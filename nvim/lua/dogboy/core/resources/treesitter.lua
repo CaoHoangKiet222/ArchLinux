@@ -21,7 +21,7 @@ return {
           "vim",
           "yaml",
         },
-        sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+        sync_install = false,                                -- install languages synchronously (only applied to `ensure_installed`)
         ignore_install = { "phpdoc", "tree-sitter-phpdoc" }, -- List of parsers to ignore installing
         autopairs = {
           enable = true,
@@ -42,14 +42,13 @@ return {
         rainbow = {
           enable = true,
           extended_mode = false,
-          colors = {
-          },
+          colors = {},
           disable = { "html" },
         },
         playground = {
           enable = true,
           disable = {},
-          updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+          updatetime = 25,         -- Debounced time for highlighting nodes in the playground from source code
           persist_queries = false, -- Whether the query persists across vim sessions
           keybindings = {
             toggle_query_editor = "o",
@@ -95,8 +94,11 @@ return {
     end,
   },
 
-  "nvim-treesitter/playground",
+  -- "nvim-treesitter/playground",
 
-  "p00f/nvim-ts-rainbow",
-
+  -- "p00f/nvim-ts-rainbow",
+  {
+    "HiPhish/nvim-ts-rainbow2",
+    event = "BufReadPost",
+  },
 }
