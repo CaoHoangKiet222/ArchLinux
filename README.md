@@ -36,3 +36,20 @@ In order to install all packages
 ```bash
 stow -t ~ *
 ```
+
+## Gruvbox Theme :jack_o_lantern:
+
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/gruvbox-config1.png)
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/gruvbox-config2.png)
+
+## Dracula Theme :space_invader:
+
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/dracula-config1.png)
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/dracula-config2.png)
+
+## Tokyo Night Theme :gem:
+
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/tokyo-config1.png)
+![image](https://github.com/CaoHoangKiet222/ArchLinux/blob/main/config/polybar/.config/polybar/images/tokyo-config2.png)
+
+<h1 align="center">🌟 Good Luck and Cheers! 🌟</h1>
