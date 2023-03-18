@@ -1,0 +1,10 @@
+* {
+    background:                     #00000000;
+    background-alt:              	#00000000;
+    background-bar:                 #A9B1D6;
+    foreground:                     #000000;
+    accent:			            	#fabd2f;
+    element-selected:        #ad8ee6;
+    element-text-selected:        #000000;
+    border:                    #A9B1D6;
+}

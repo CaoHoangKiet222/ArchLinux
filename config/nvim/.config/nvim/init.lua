@@ -1,0 +1,1 @@
+require("dogboy.core.lazy")

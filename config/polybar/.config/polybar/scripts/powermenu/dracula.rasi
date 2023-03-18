@@ -1,0 +1,74 @@
+* {
+    default-background: #14141450;
+    default-foreground: #f8f8f2;
+    default-border:  #ff00ff;
+    alternative-background: #282a36;
+    invisible: #00000000;
+    hard-blue: #9aedfe;
+    light-blue: #8be9fd;
+
+    background-color: @invisible;
+    border-color: #bd93f9;
+    font: "Hack Nerd Font 12";
+    text-color: @default-foreground;
+}
+
+window {
+    background-color: @default-background;
+    border: 2;
+    border-radius: 10;
+    border-color: @default-border;
+    padding: 10;
+    width: 300;
+    location: west;
+    y-offset: -35.3%;
+    x-offset: 0.6%;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+inputbar {
+   spacing: 5;
+   padding: 1;
+}
+
+entry {
+    background-color: @alternative-background;
+    padding: 6px;
+    border: 1;
+    border-radius: 2 0 0 2;
+}
+
+prompt {
+   padding: 6;
+}
+
+ci {
+    border: 5;
+}
+
+listview {
+  fixed-height: 0;
+  spacing: 0;
+  scrollbar: false;
+  padding: 1 0;
+  lines: 5;
+}
+
+element {
+    padding: 5px;
+    margin: 2;
+    border: 1;
+    border-radius: 5;
+    border-color: @border-color;
+}
+
+element.selected {
+    background-color: @light-blue;
+    border-color:     @hard-blue;
+}
+
+/* vim:ft=css
